@@ -2,9 +2,9 @@ import requests
 from requests.exceptions import RequestException
 
 from .exceptions import (
+    BlizzardApiClientException,
     BlizzardApiOAuthException,
     BlizzardApiRequestException,
-    BlizzardApiClientException,
 )
 from .mixins import GameDataMixin
 
