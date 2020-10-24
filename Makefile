@@ -5,7 +5,7 @@ devinstall:
 clean:
 	rm -rf dist
 	rm -rf build
-	rm -rf cov_html
+	rm -rf htmlcov
 	rm -rf python_blizzardapi.egg-info
 	rm -rf .coverage
 	rm -rf docs
