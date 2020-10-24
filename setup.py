@@ -12,8 +12,6 @@ install_requirements = [
 tests_requirements = [
     "pytest==6.0.1",
     "pytest-cov==2.10.1",
-    "pytest-flake8==1.0.6",
-    "pytest-isort==1.1.0",
     "pytest-mock==3.3.1",
 ]
 
