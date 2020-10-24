@@ -41,6 +41,16 @@ class BlizzardApi(GameDataMixin):
             msg = "You must initialize the client with a client id/client secret or an access token."
             raise BlizzardApiClientException(msg)
 
+        elif self._client_id is None and self._client_secret is not None:
+            msg = "You must initialize the client with a client id to make this work!"
+            raise BlizzardApiClientException(msg)
+
+        elif self._client_id is not None and self._client_secret is None:
+            msg = (
+                "You must initialize the client with a client secret to make this work!"
+            )
+            raise BlizzardApiClientException(msg)
+
     def _get_client_credentials(self):
         if self._region == "cn":
             url = self.oauth_cn_url.format(self._region, "/oauth/token")
