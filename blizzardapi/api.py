@@ -51,17 +51,7 @@ class BlizzardApi(GameDataMixin, ProfileMixin):
             )
             raise BlizzardApiClientException(msg)
 
-    def _get_client_credentials(self):
-        if self._region == "cn":
-            url = self.oauth_cn_url.format(self._region, "/oauth/token")
-        else:
-            url = self.oauth_url.format(self._region, "/oauth/token")
-        filters = {
-            "grant_type": "client_credentials",
-            "client_id": self._client_id,
-            "client_secret": self._client_secret,
-        }
-
+    def _request(self, url, **filters):
         try:
             response = self._session.get(url, params=filters)
         except RequestException as e:
@@ -78,6 +68,21 @@ class BlizzardApi(GameDataMixin, ProfileMixin):
         except Exception as e:
             raise BlizzardApiOAuthException(str(e))
 
+        return json
+
+    def _get_client_credentials(self):
+        if self._region == "cn":
+            url = self.oauth_cn_url.format(self._region, "/oauth/token")
+        else:
+            url = self.oauth_url.format(self._region, "/oauth/token")
+        filters = {
+            "grant_type": "client_credentials",
+            "client_id": self._client_id,
+            "client_secret": self._client_secret,
+        }
+
+        json = self._request(url, **filters)
+
         self._access_token = json["access_token"]
 
     def _request_handler(self, url, **filters):
@@ -88,21 +93,7 @@ class BlizzardApi(GameDataMixin, ProfileMixin):
         filters["locale"] = self._locale
         filters["access_token"] = self._access_token
 
-        try:
-            response = self._session.get(url, params=filters)
-        except RequestException as e:
-            raise BlizzardApiRequestException(str(e))
-
-        if not response.ok:
-            msg = "Invalid response - {0} for {1}".format(
-                response.status_code, response.url
-            )
-            raise BlizzardApiRequestException(msg)
-
-        try:
-            json = response.json()
-        except Exception as e:
-            raise BlizzardApiRequestException(str(e))
+        json = self._request(url, **filters)
 
         return json
 
