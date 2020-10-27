@@ -6,10 +6,10 @@ from .exceptions import (
     BlizzardApiOAuthException,
     BlizzardApiRequestException,
 )
-from .mixins import GameDataMixin
+from .mixins import GameDataMixin, ProfileMixin
 
 
-class BlizzardApi(GameDataMixin):
+class BlizzardApi(GameDataMixin, ProfileMixin):
     def __init__(
         self,
         client_id=None,

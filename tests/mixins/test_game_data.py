@@ -1,26 +1,9 @@
-from datetime import datetime, timedelta
-
-import pytest
-import requests
 from blizzardapi import BlizzardApi
-
-
-def get_success_response():
-    mock = requests.models.Response()
-    mock.status_code = 200
-    mock._content = b"{}"
-    return mock
-
-
-@pytest.fixture
-def response_mock(mocker):
-    return mocker.patch("requests.Session.get", return_value=get_success_response())
 
 
 class TestGameDataMixin:
     def setup(self):
-        self.api = BlizzardApi("client-id", "client-secret")
-        self.api._access_token = "access_token"
+        self.api = BlizzardApi("client-id", "client-secret", "access_token")
 
         self.params = {
             "access_token": "access_token",
