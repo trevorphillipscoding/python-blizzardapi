@@ -1,7 +1,3 @@
-devinstall:
-	pip install -e .
-	pip install -e .[tests]
-
 clean:
 	rm -rf dist
 	rm -rf build

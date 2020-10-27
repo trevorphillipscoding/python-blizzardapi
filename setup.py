@@ -9,12 +9,6 @@ install_requirements = [
     "requests==2.24.0",
 ]
 
-tests_requirements = [
-    "pytest==6.0.1",
-    "pytest-cov==2.10.1",
-    "pytest-mock==3.3.1",
-]
-
 setuptools.setup(
     name="python-blizzardapi",
     version=__version__,
@@ -27,9 +21,6 @@ setuptools.setup(
     url="https://github.com/trevorphillips/python-blizzardapi",
     packages=setuptools.find_packages(),
     install_requires=install_requirements,
-    extras_require={
-        "tests": tests_requirements,
-    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
