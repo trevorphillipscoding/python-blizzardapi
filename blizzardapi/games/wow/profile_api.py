@@ -1,11 +1,11 @@
-from ...api import Api
+from ..api import Api
 
 
 class ProfileApi(Api):
     """All Profile API methods"""
 
-    def __init__(self, region, locale, client_id, client_secret, access_token):
-        super().__init__(region, client_id, client_secret, access_token)
+    def __init__(self, access_token, region, locale):
+        super().__init__(access_token, region)
         self._locale = locale
 
     # Account Profile API
