@@ -1,2 +1,2 @@
-from .api import BlizzardApi  # noqa
-from .exceptions import *  # noqa
+from .exceptions import BlizzardApiRequestException  # noqa
+from .wow_api import WowApi  # noqa

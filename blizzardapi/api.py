@@ -1,111 +1,82 @@
 import requests
 from requests.exceptions import RequestException
 
-from .exceptions import (
-    BlizzardApiClientException,
-    BlizzardApiOAuthException,
-    BlizzardApiRequestException,
-)
-from .mixins import GameDataMixin, ProfileMixin
+from .exceptions import BlizzardApiRequestException
 
 
-class BlizzardApi(GameDataMixin, ProfileMixin):
-    def __init__(
-        self,
-        client_id=None,
-        client_secret=None,
-        access_token=None,
-        region="us",
-        locale="en_US",
-    ):
+class Api:
+    def __init__(self, region, client_id, client_secret, access_token):
+        self.region = region
         self._client_id = client_id
         self._client_secret = client_secret
         self._access_token = access_token
-        self._region = region
-        self._locale = locale
 
-        self.api_url = "https://{0}.api.blizzard.com{1}"
-        self.api_cn_url = "https://gateway.battlenet.com.cn{0}"
-        self.oauth_url = "https://{0}.battle.net{1}"
-        self.oauth_cn_url = "https://www.battlenet.com.cn{0}"
+        self._base_url = "https://{0}.api.blizzard.com{1}"
+        self._base_url_cn = "https://gateway.battlenet.com.cn{0}"
+
+        self._oauth_url = "https://{0}.battle.net{1}"
+        self._oauth_url_cn = "https://www.battlenet.com.cn{0}"
+
         self._session = requests.Session()
 
-        self._is_valid_client()
+    def _get_client_credentials(self):
+        if self.region == "cn":
+            url = self._oauth_url_cn.format("/oauth/token")
+        else:
+            url = self._oauth_url.format(self.region, "/oauth/token")
 
-    def _is_valid_client(self):
-        if (
-            self._client_id is None
-            and self._client_secret is None
-            and self._access_token is None
-        ):
-            msg = "You must initialize the client with a client id/client secret or an access token."
-            raise BlizzardApiClientException(msg)
+        json = self._oauth_request(url, grant_type="client_credentials")
 
-        elif self._client_id is None and self._client_secret is not None:
-            msg = "You must initialize the client with a client id to make this work!"
-            raise BlizzardApiClientException(msg)
+        self._access_token = json["access_token"]
 
-        elif self._client_id is not None and self._client_secret is None:
-            msg = (
-                "You must initialize the client with a client secret to make this work!"
-            )
-            raise BlizzardApiClientException(msg)
-
-    def _request(self, url, **filters):
+    def _oauth_request(self, url, **query_params):
         try:
-            response = self._session.get(url, params=filters)
+            response = self._session.post(url, params=query_params, auth=(
+                self._client_id, self._client_secret))
         except RequestException as e:
-            raise BlizzardApiOAuthException(str(e))
+            raise BlizzardApiRequestException(str(e))
 
         if not response.ok:
-            msg = "Invalid response - {0} for {1}".format(
-                response.status_code, response.url
-            )
-            raise BlizzardApiOAuthException(msg)
+            msg = f"Invalid response - {response.status_code} for {response.url}"
+            raise BlizzardApiRequestException(msg)
 
         try:
             json = response.json()
         except Exception as e:
-            raise BlizzardApiOAuthException(str(e))
+            raise BlizzardApiRequestException(str(e))
 
         return json
 
-    def _get_client_credentials(self):
-        if self._region == "cn":
-            url = self.oauth_cn_url.format(self._region, "/oauth/token")
-        else:
-            url = self.oauth_url.format(self._region, "/oauth/token")
-        filters = {
-            "grant_type": "client_credentials",
-            "client_id": self._client_id,
-            "client_secret": self._client_secret,
-        }
+    def _request(self, url, **query_params):
+        try:
+            response = self._session.get(url, params=query_params)
+        except RequestException as e:
+            raise BlizzardApiRequestException(str(e))
 
-        json = self._request(url, **filters)
+        if not response.ok:
+            msg = f"Invalid response - {response.status_code} for {response.url}"
+            raise BlizzardApiRequestException(msg)
 
-        self._access_token = json["access_token"]
+        try:
+            json = response.json()
+        except Exception as e:
+            raise BlizzardApiRequestException(str(e))
 
-    def _request_handler(self, url, **filters):
+        return json
+
+    def _request_handler(self, url, **query_params):
         if self._access_token is None:
             self._get_client_credentials()
-            return self._request_handler(url, **filters)
+            return self._request_handler(url, **query_params)
 
-        filters["locale"] = self._locale
-        filters["access_token"] = self._access_token
-
-        json = self._request(url, **filters)
+        query_params["access_token"] = self._access_token
+        json = self._request(url, **query_params)
 
         return json
 
-    def get_data_resource(self, url):
-        return self._request_handler(url)
-
-    def get_resource(self, resource, namespace, *args):
-        resource = resource.format(*args)
-        namespace = namespace.format(self._region)
-
-        if self._region == "cn":
-            url = self.api_cn_url.format(resource)
+    def get_resource(self, resource, **query_params):
+        if self.region == "cn":
+            url = self._base_url_cn.format(resource)
         else:
-            url = self.api_url.format(self._region, resource)
-        return self._request_handler(url, namespace=namespace)
+            url = self._base_url.format(self.region, resource)
+        return self._request_handler(url, **query_params)
