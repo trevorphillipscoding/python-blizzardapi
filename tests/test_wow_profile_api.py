@@ -1,7 +1,7 @@
 from blizzardapi import WowApi
 
 
-class TestProfileMixin(object):
+class TestWowProfileApi(object):
     def setup(self):
         self.access_token = "access_token"
         self.region = "us"
