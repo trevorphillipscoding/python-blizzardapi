@@ -14,7 +14,9 @@ class Api:
 
         self._session = requests.Session()
 
-    def _request(self, url, **query_params):
+    def _request_handler(self, url, **query_params):
+        query_params["access_token"] = self._access_token
+
         try:
             response = self._session.get(url, params=query_params)
         except RequestException as e:
@@ -30,10 +32,6 @@ class Api:
             raise BlizzardApiRequestException(str(e))
 
         return json
-
-    def _request_handler(self, url, **query_params):
-        query_params["access_token"] = self._access_token
-        return self._request(url, **query_params)
 
     def _format_api_url(self, resource):
         if self.region == "cn":
