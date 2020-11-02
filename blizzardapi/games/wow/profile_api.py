@@ -74,7 +74,7 @@ class ProfileApi(Api):
         """
         Character Appearance API - Returns a summary of a character's appearance settings.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{realm_slug}/appearance"
+        resource = f"/profile/wow/character/{realm_slug}/{character_name}/appearance"
         namespace = f"profile-{self.region}"
         return super().get_resource(resource, namespace=namespace, locale=self._locale)
 
