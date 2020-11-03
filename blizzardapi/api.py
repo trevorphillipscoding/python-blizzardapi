@@ -14,7 +14,8 @@ class Api:
         self._session = requests.Session()
 
     def _request_handler(self, url, **query_params):
-        query_params["access_token"] = self._access_token
+        if not query_params.get("access_token", None):
+            query_params["access_token"] = self._access_token
 
         try:
             response = self._session.get(url, params=query_params)

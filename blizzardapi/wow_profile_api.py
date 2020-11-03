@@ -9,49 +9,73 @@ class ProfileApi(Api):
 
     # Account Profile API
 
-    def get_account_profile_summary(self, region, locale):
+    def get_account_profile_summary(self, region, locale, access_token):
         """
         Account Profile API - Returns a profile summary for an account.
         """
         resource = f"/profile/user/wow"
-        query_params = {"namespace": f"profile-{region}", "locale": locale}
+        query_params = {
+            "namespace": f"profile-{region}",
+            "locale": locale,
+            "access_token": access_token,
+        }
         return super().get_resource(resource, region, **query_params)
 
-    def get_protected_character_profile_summary(self, region, locale, realm_id, character_id):
+    def get_protected_character_profile_summary(
+        self, region, locale, access_token, realm_id, character_id
+    ):
         """
         Account Profile API - Returns a protected profile summary for a character.
         """
         resource = f"/profile/user/wow/protected-character/{realm_id}-{character_id}"
-        query_params = {"namespace": f"profile-{region}", "locale": locale}
+        query_params = {
+            "namespace": f"profile-{region}",
+            "locale": locale,
+            "access_token": access_token,
+        }
         return super().get_resource(resource, region, **query_params)
 
-    def get_account_collections_index(self, region, locale):
+    def get_account_collections_index(self, region, locale, access_token):
         """
         Account Profile API - Returns an index of collection types for an account.
         """
         resource = f"/profile/user/wow/collections"
-        query_params = {"namespace": f"profile-{region}", "locale": locale}
+        query_params = {
+            "namespace": f"profile-{region}",
+            "locale": locale,
+            "access_token": access_token,
+        }
         return super().get_resource(resource, region, **query_params)
 
-    def get_account_mounts_collection_summary(self, region, locale):
+    def get_account_mounts_collection_summary(self, region, locale, access_token):
         """
         Account Profile API - Returns a summary of the mounts an account has obtained.
         """
         resource = f"/profile/user/wow/collections/mounts"
-        query_params = {"namespace": f"profile-{region}", "locale": locale}
+        query_params = {
+            "namespace": f"profile-{region}",
+            "locale": locale,
+            "access_token": access_token,
+        }
         return super().get_resource(resource, region, **query_params)
 
-    def get_account_pets_collection_summary(self, region, locale):
+    def get_account_pets_collection_summary(self, region, locale, access_token):
         """
         Account Profile API - Returns a summary of the battle pets an account has obtained.
         """
         resource = f"/profile/user/wow/collections/pets"
-        query_params = {"namespace": f"profile-{region}", "locale": locale}
+        query_params = {
+            "namespace": f"profile-{region}",
+            "locale": locale,
+            "access_token": access_token,
+        }
         return super().get_resource(resource, region, **query_params)
 
     # Character Achievements API
 
-    def get_character_achievements_summary(self, region, locale, realm_slug, character_name):
+    def get_character_achievements_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Achievements API - Returns a summary of the achievements a character has completed.
         """
@@ -59,7 +83,9 @@ class ProfileApi(Api):
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_character_achievement_statistics(self, region, locale, realm_slug, character_name):
+    def get_character_achievement_statistics(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Achievements API - Returns a character's statistics as they pertain to achievements.
         """
@@ -69,7 +95,9 @@ class ProfileApi(Api):
 
     # Character Appearance API
 
-    def get_character_appearance_summary(self, region, locale, realm_slug, character_name):
+    def get_character_appearance_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Appearance API - Returns a summary of a character's appearance settings.
         """
@@ -79,7 +107,9 @@ class ProfileApi(Api):
 
     # Character Collections API
 
-    def get_character_collections_index(self, region, locale, realm_slug, character_name):
+    def get_character_collections_index(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Collections API - Returns an index of collection types for a character.
         """
@@ -87,25 +117,35 @@ class ProfileApi(Api):
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_character_mounts_collection_index(self, region, locale, realm_slug, character_name):
+    def get_character_mounts_collection_index(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Collections API - Returns a summary of the mounts a character has obtained.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/collections/mounts"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/collections/mounts"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_character_pets_collection_index(self, region, locale, realm_slug, character_name):
+    def get_character_pets_collection_index(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Collections API - Returns a summary of the battle pets a character has obtained.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/collections/pets"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/collections/pets"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
     # Character Encounters API
 
-    def get_character_encounters_summary(self, region, locale, realm_slug, character_name):
+    def get_character_encounters_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Encounters API - Returns a summary of a character's encounters.
         """
@@ -117,7 +157,9 @@ class ProfileApi(Api):
         """
         Character Encounters API - Returns a summary of a character's completed dungeons.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/encounters/dungeons"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/encounters/dungeons"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -125,13 +167,17 @@ class ProfileApi(Api):
         """
         Character Encounters API - Returns a summary of a character's completed raids.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/encounters/raids"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/encounters/raids"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
     # Character Equipment API
 
-    def get_character_equipment_summary(self, region, locale, realm_slug, character_name):
+    def get_character_equipment_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Equipment API - Returns a summary of the items equipped by a character.
         """
@@ -141,7 +187,9 @@ class ProfileApi(Api):
 
     # Character Hunter Pets API
 
-    def get_character_hunter_pets_summary(self, region, locale, realm_slug, character_name):
+    def get_character_hunter_pets_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Hunter Pets API - If the character is a hunter, returns a summary of the character's hunter pets.
         """
@@ -155,13 +203,17 @@ class ProfileApi(Api):
         """
         Character Media API - Returns a summary of the media assets available for a character (such as an avatar render).
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/character-media"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/character-media"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
     # Character Mythic Keystone Profile API
 
-    def get_character_mythic_keystone_profile_index(self, region, locale, realm_slug, character_name):
+    def get_character_mythic_keystone_profile_index(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Mythic Keystone Profile API - Returns the Mythic Keystone profile index for a character.
         """
@@ -169,7 +221,9 @@ class ProfileApi(Api):
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_character_mythic_keystone_profile_season_details(self, region, locale, realm_slug, character_name, season_id):
+    def get_character_mythic_keystone_profile_season_details(
+        self, region, locale, realm_slug, character_name, season_id
+    ):
         """
         Character Mythic Keystone Profile API - Returns the Mythic Keystone season details for a character.
         """
@@ -179,7 +233,9 @@ class ProfileApi(Api):
 
     # Character Professions API
 
-    def get_character_professions_summary(self, region, locale, realm_slug, character_name):
+    def get_character_professions_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Professions API - Returns a summary of professions for a character.
         """
@@ -207,7 +263,9 @@ class ProfileApi(Api):
 
     # Character PvP API
 
-    def get_character_pvp_bracket_statistics(self, region, locale, realm_slug, character_name, pvp_bracket):
+    def get_character_pvp_bracket_statistics(
+        self, region, locale, realm_slug, character_name, pvp_bracket
+    ):
         """
         Character PvP API - Returns the PvP bracket statistics for a character.
         """
@@ -233,17 +291,23 @@ class ProfileApi(Api):
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_character_completed_quests(self, region, locale, realm_slug, character_name):
+    def get_character_completed_quests(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Quests API - Returns a list of quests that a character has completed.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/quests/completed"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/quests/completed"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
     # Character Reputations API
 
-    def get_character_reputations_summary(self, region, locale, realm_slug, character_name):
+    def get_character_reputations_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Reputations API - Returns a summary of a character's reputations.
         """
@@ -253,17 +317,23 @@ class ProfileApi(Api):
 
     # Character Specializations API
 
-    def get_character_specializations_summary(self, region, locale, realm_slug, character_name):
+    def get_character_specializations_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Specializations API - Returns a summary of a character's specializations.
         """
-        resource = f"/profile/wow/character/{realm_slug}/{character_name}/specializations"
+        resource = (
+            f"/profile/wow/character/{realm_slug}/{character_name}/specializations"
+        )
         query_params = {"namespace": f"profile-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
     # Character Statistics API
 
-    def get_character_statistics_summary(self, region, locale, realm_slug, character_name):
+    def get_character_statistics_summary(
+        self, region, locale, realm_slug, character_name
+    ):
         """
         Character Statistics API - Returns a statistics summary for a character.
         """

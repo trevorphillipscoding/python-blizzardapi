@@ -225,7 +225,9 @@ class GameDataApi(Api):
         """
         Item API - Returns an item subclass by ID.
         """
-        resource = f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
+        resource = (
+            f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
+        )
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -450,16 +452,22 @@ class GameDataApi(Api):
 
     # Mythic Keystone Leaderboard API
 
-    def get_mythic_keystone_leaderboards_index(self, region, locale, connected_realm_id):
+    def get_mythic_keystone_leaderboards_index(
+        self, region, locale, connected_realm_id
+    ):
         """
         Mythic Keystone Leaderboard API - Returns an index of Mythic Keystone Leaderboard dungeon
         instances for a connected realm.
         """
-        resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
+        resource = (
+            f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
+        )
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_mythic_keystone_leaderboard(self, region, locale, connected_realm_id, dungeon_id, period_id):
+    def get_mythic_keystone_leaderboard(
+        self, region, locale, connected_realm_id, dungeon_id, period_id
+    ):
         """
         Mythic Keystone Leaderboard API - Returns a weekly Mythic Keystone Leaderboard by period.
         """
