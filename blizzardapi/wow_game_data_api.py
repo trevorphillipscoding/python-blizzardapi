@@ -1,7 +1,7 @@
 from .api import Api
 
 
-class GameDataApi(Api):
+class WowGameDataApi(Api):
     """All Game Data API methods"""
 
     def __init__(self, client_id, client_secret):

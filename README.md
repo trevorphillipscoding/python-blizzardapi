@@ -3,8 +3,10 @@
 python-blizzardapi is a client library for Blizzard's APIs.
 
 Current supported features include:
+- Battle.net User
 - WoW Profile
 - WoW Game Data
+- Diablo 3 Game Data
 
 To gain access to Blizzard's API please register [here](https://develop.battle.net/access/) to obtain a client id and client secret.
 

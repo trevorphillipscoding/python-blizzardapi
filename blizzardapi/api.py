@@ -70,7 +70,7 @@ class Api:
 
         return url
 
-    def get_resource(self, resource, region, query_params):
+    def get_resource(self, resource, region, query_params={}):
         url = self._format_api_url(resource, region)
         return self._request_handler(url, region, query_params)
 

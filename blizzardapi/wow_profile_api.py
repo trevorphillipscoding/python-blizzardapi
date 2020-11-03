@@ -1,7 +1,7 @@
 from .api import Api
 
 
-class ProfileApi(Api):
+class WowProfileApi(Api):
     """All Profile API methods"""
 
     def __init__(self, client_id, client_secret):
