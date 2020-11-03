@@ -3,6 +3,6 @@ from .wow_profile_api import ProfileApi
 
 
 class WowApi:
-    def __init__(self, access_token):
-        self.game_data = GameDataApi(access_token)
-        self.profile = ProfileApi(access_token)
+    def __init__(self, client_id, client_secret):
+        self.game_data = GameDataApi(client_id, client_secret)
+        self.profile = ProfileApi(client_id, client_secret)

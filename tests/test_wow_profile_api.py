@@ -1,15 +1,15 @@
-from blizzardapi import WowApi
+from blizzardapi import BlizzardApi
 
 
 class TestWowProfileApi(object):
     def setup(self):
-        self.access_token = "access_token"
-        self.api = WowApi(self.access_token)
+        self.api = BlizzardApi("client_id", "client_secret")
+        self.api.wow.profile._access_token = "access_token"
 
     # Account Profile API
 
     def test_get_account_profile_summary(self, success_response_mock):
-        self.api.profile.get_account_profile_summary(
+        self.api.wow.profile.get_account_profile_summary(
             "us", "en_US", "new_access_token"
         )
         params = {
@@ -24,7 +24,7 @@ class TestWowProfileApi(object):
     def test_get_protected_character_profile_summary(
         self, success_response_mock
     ):
-        self.api.profile.get_protected_character_profile_summary(
+        self.api.wow.profile.get_protected_character_profile_summary(
             "us", "en_US", "new_access_token", 1, 9000
         )
         params = {
@@ -38,7 +38,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_account_collections_index(self, success_response_mock):
-        self.api.profile.get_account_collections_index(
+        self.api.wow.profile.get_account_collections_index(
             "us", "en_US", "new_access_token"
         )
         params = {
@@ -54,7 +54,7 @@ class TestWowProfileApi(object):
     def test_get_account_mounts_collection_summary(
         self, success_response_mock
     ):
-        self.api.profile.get_account_mounts_collection_summary(
+        self.api.wow.profile.get_account_mounts_collection_summary(
             "us", "en_US", "new_access_token"
         )
         params = {
@@ -68,7 +68,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_account_pets_collection_summary(self, success_response_mock):
-        self.api.profile.get_account_pets_collection_summary(
+        self.api.wow.profile.get_account_pets_collection_summary(
             "us", "en_US", "new_access_token"
         )
         params = {
@@ -84,13 +84,13 @@ class TestWowProfileApi(object):
     # Character Achievements APIa
 
     def test_get_character_achievements_summary(self, success_response_mock):
-        self.api.profile.get_character_achievements_summary(
+        self.api.wow.profile.get_character_achievements_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/achievements",
@@ -98,13 +98,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_achievement_statistics(self, success_response_mock):
-        self.api.profile.get_character_achievement_statistics(
+        self.api.wow.profile.get_character_achievement_statistics(
             "us", "en_US", "moon", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/moon/asmon/achievements/statistics",
@@ -114,13 +114,13 @@ class TestWowProfileApi(object):
     # Character Appearance API
 
     def test_get_character_appearance_summary(self, success_response_mock):
-        self.api.profile.get_character_appearance_summary(
+        self.api.wow.profile.get_character_appearance_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/appearance",
@@ -130,13 +130,13 @@ class TestWowProfileApi(object):
     # Character Collections API
 
     def test_get_character_collections_index(self, success_response_mock):
-        self.api.profile.get_character_collections_index(
+        self.api.wow.profile.get_character_collections_index(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/collections",
@@ -146,13 +146,13 @@ class TestWowProfileApi(object):
     def test_get_character_mounts_collection_index(
         self, success_response_mock
     ):
-        self.api.profile.get_character_mounts_collection_index(
+        self.api.wow.profile.get_character_mounts_collection_index(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/collections/mounts",
@@ -160,13 +160,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_pets_collection_index(self, success_response_mock):
-        self.api.profile.get_character_pets_collection_index(
+        self.api.wow.profile.get_character_pets_collection_index(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/collections/pets",
@@ -176,13 +176,13 @@ class TestWowProfileApi(object):
     # Character Encounters API
 
     def test_get_character_encounters_summary(self, success_response_mock):
-        self.api.profile.get_character_encounters_summary(
+        self.api.wow.profile.get_character_encounters_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/encounters",
@@ -190,13 +190,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_dungeons(self, success_response_mock):
-        self.api.profile.get_character_dungeons(
+        self.api.wow.profile.get_character_dungeons(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/encounters/dungeons",
@@ -204,11 +204,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_raids(self, success_response_mock):
-        self.api.profile.get_character_raids("us", "en_US", "khadgar", "asmon")
+        self.api.wow.profile.get_character_raids(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/encounters/raids",
@@ -218,13 +220,13 @@ class TestWowProfileApi(object):
     # Character Equipment API
 
     def test_get_character_equipment_summary(self, success_response_mock):
-        self.api.profile.get_character_equipment_summary(
+        self.api.wow.profile.get_character_equipment_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/equipment",
@@ -234,13 +236,13 @@ class TestWowProfileApi(object):
     # Character Hunter Pets API
 
     def test_get_character_hunter_pets_summary(self, success_response_mock):
-        self.api.profile.get_character_hunter_pets_summary(
+        self.api.wow.profile.get_character_hunter_pets_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/hunter-pets",
@@ -250,13 +252,13 @@ class TestWowProfileApi(object):
     # Character Media API
 
     def test_get_character_media_summary(self, success_response_mock):
-        self.api.profile.get_character_media_summary(
+        self.api.wow.profile.get_character_media_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/character-media",
@@ -268,13 +270,13 @@ class TestWowProfileApi(object):
     def test_get_character_mythic_keystone_profile_index(
         self, success_response_mock
     ):
-        self.api.profile.get_character_mythic_keystone_profile_index(
+        self.api.wow.profile.get_character_mythic_keystone_profile_index(
             "us", "en_US", "blackmoore", "ayanda"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "{0}/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile".format(
@@ -286,13 +288,13 @@ class TestWowProfileApi(object):
     def test_get_character_mythic_keystone_profile_season_details(
         self, success_response_mock
     ):
-        self.api.profile.get_character_mythic_keystone_profile_season_details(
+        self.api.wow.profile.get_character_mythic_keystone_profile_season_details(
             "us", "en_US", "blackmoore", "ayanda", 1
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "{0}/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile/season/1".format(
@@ -304,13 +306,13 @@ class TestWowProfileApi(object):
     # Character Professions API
 
     def test_get_character_professions_summary(self, success_response_mock):
-        self.api.profile.get_character_professions_summary(
+        self.api.wow.profile.get_character_professions_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/professions",
@@ -320,13 +322,13 @@ class TestWowProfileApi(object):
     # Character Profile API
 
     def test_get_character_profile_summary(self, success_response_mock):
-        self.api.profile.get_character_profile_summary(
+        self.api.wow.profile.get_character_profile_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon",
@@ -334,13 +336,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_profile_status(self, success_response_mock):
-        self.api.profile.get_character_profile_status(
+        self.api.wow.profile.get_character_profile_status(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/status",
@@ -350,13 +352,13 @@ class TestWowProfileApi(object):
     # Character PvP API
 
     def test_get_character_pvp_bracket_statistics(self, success_response_mock):
-        self.api.profile.get_character_pvp_bracket_statistics(
+        self.api.wow.profile.get_character_pvp_bracket_statistics(
             "us", "en_US", "khadgar", "asmon", "3v3"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/pvp-bracket/3v3",
@@ -364,13 +366,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_pvp_summary(self, success_response_mock):
-        self.api.profile.get_character_pvp_summary(
+        self.api.wow.profile.get_character_pvp_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/pvp-summary",
@@ -380,13 +382,13 @@ class TestWowProfileApi(object):
     # Character Quests API
 
     def test_get_character_quests(self, success_response_mock):
-        self.api.profile.get_character_quests(
+        self.api.wow.profile.get_character_quests(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/quests",
@@ -394,13 +396,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_completed_quests(self, success_response_mock):
-        self.api.profile.get_character_completed_quests(
+        self.api.wow.profile.get_character_completed_quests(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/quests/completed",
@@ -410,13 +412,13 @@ class TestWowProfileApi(object):
     # Character Reputations API
 
     def test_get_character_reputations_summary(self, success_response_mock):
-        self.api.profile.get_character_reputations_summary(
+        self.api.wow.profile.get_character_reputations_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/reputations",
@@ -428,13 +430,13 @@ class TestWowProfileApi(object):
     def test_get_character_specializations_summary(
         self, success_response_mock
     ):
-        self.api.profile.get_character_specializations_summary(
+        self.api.wow.profile.get_character_specializations_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/specializations",
@@ -444,13 +446,13 @@ class TestWowProfileApi(object):
     # Character Statistics API
 
     def test_get_character_statistics_summary(self, success_response_mock):
-        self.api.profile.get_character_statistics_summary(
+        self.api.wow.profile.get_character_statistics_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/statistics",
@@ -460,13 +462,13 @@ class TestWowProfileApi(object):
     # Character Titles API
 
     def test_get_character_titles_summary(self, success_response_mock):
-        self.api.profile.get_character_titles_summary(
+        self.api.wow.profile.get_character_titles_summary(
             "us", "en_US", "khadgar", "asmon"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/profile/wow/character/khadgar/asmon/titles",
@@ -476,11 +478,11 @@ class TestWowProfileApi(object):
     # Guild API
 
     def test_get_guild(self, success_response_mock):
-        self.api.profile.get_guild("us", "en_US", "khadgar", "bestguild")
+        self.api.wow.profile.get_guild("us", "en_US", "khadgar", "bestguild")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/data/wow/guild/khadgar/bestguild",
@@ -488,13 +490,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_activity(self, success_response_mock):
-        self.api.profile.get_guild_activity(
+        self.api.wow.profile.get_guild_activity(
             "us", "en_US", "khadgar", "bestguild"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/data/wow/guild/khadgar/bestguild/activity",
@@ -502,13 +504,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_achievements(self, success_response_mock):
-        self.api.profile.get_guild_achievements(
+        self.api.wow.profile.get_guild_achievements(
             "us", "en_US", "khadgar", "bestguild"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/data/wow/guild/khadgar/bestguild/achievements",
@@ -516,13 +518,13 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_roster(self, success_response_mock):
-        self.api.profile.get_guild_roster(
+        self.api.wow.profile.get_guild_roster(
             "us", "en_US", "khadgar", "bestguild"
         )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
-            "access_token": self.access_token,
+            "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
             "https://us.api.blizzard.com/data/wow/guild/khadgar/bestguild/roster",

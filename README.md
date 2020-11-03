@@ -27,24 +27,20 @@ Python (3.6, 3.7, 3.8, 3.9)
 ```python
 from blizzardapi import BlizzardApi
 
-# Using only `client_id` and `client_secret`.
-api_client = BlizzardApi(client_id="client_id", client_secret="client_secret")
+api_client = BlizzardApi("client_id", "client_secret")
 
-# Using only "access_token".
-api_client = BlizzardApi(access_token="access_token")
+# Unprotected API endpoint
+categories_index = api_client.wow.game_data.get_achievement_categories_index("us", "en_US")
 
-# Using different regions and locales.
-api_client = BlizzardApi(access_token="access_token", region="eu", locale="de_DE")
-
-categories_index = api_client.get_achievement_categories_index()
-print(categories_index)
+# Protected API Endpoint
+summary = api_client.wow.profile.get_account_profile_summary("us", "en_US", "access_token")
 ```
 
 # Access token vs Client ID/Client Secret
 
-You can pass in a `client_id` and `client_secret` and use almost any endpoint normally except for a few that require an `access_token` obtained via OAuth authorization code flow.
+You can pass in a `client_id` and `client_secret` and use almost any endpoint except for a few that require an `access_token` obtained via OAuth authorization code flow. You can find more information at https://develop.battle.net/documentation/guides/using-oauth/authorization-code-flow.
 
-Here is the list of endpoints, specified by blizzard, that require an OAuth token.
+Here is the list of endpoints, specified by Blizzard, that require an OAuth token.
 
 ```
 GET /oauth/userinfo
@@ -54,8 +50,6 @@ GET /profile/user/wow/collections
 GET /profile/user/wow/collections/pets
 GET /profile/user/wow/collections/mounts
 ```
-
-**However**, you do **NOT** need an OAuth token if you're only going to be using those endpoints for **YOUR** own character information. You only require an access token if you are using these endpoints to gain access to other people's character information.
 
 # Todo
 

@@ -4,8 +4,8 @@ from .api import Api
 class GameDataApi(Api):
     """All Game Data API methods"""
 
-    def __init__(self, access_token):
-        super().__init__(access_token)
+    def __init__(self, client_id, client_secret):
+        super().__init__(client_id, client_secret)
 
     # Achievement API
 
