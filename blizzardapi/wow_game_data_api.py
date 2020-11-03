@@ -15,7 +15,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/achievement-category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_achievement_category(
         self, region, locale, achievement_category_id
@@ -25,7 +25,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/achievement-category/{achievement_category_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_achievements_index(self, region, locale):
         """
@@ -33,7 +33,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/achievement/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_achievement(self, region, locale, achievement_id):
         """
@@ -41,7 +41,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/achievement/{achievement_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_achievement_media(self, region, locale, achievement_id):
         """
@@ -49,7 +49,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/achievement/{achievement_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Auction House API
 
@@ -59,7 +59,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}/auctions"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Azerite Essence API
 
@@ -69,7 +69,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/azerite-essence/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_azerite_essence(self, region, locale, azerite_essence_id):
         """
@@ -77,7 +77,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/azerite-essence/{azerite_essence_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_azerite_essence_media(self, region, locale, azerite_essence_id):
         """
@@ -85,7 +85,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/azerite-essence/{azerite_essence_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Connected Realm API
 
@@ -95,7 +95,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/connected-realm/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_connected_realm(self, region, locale, connected_realm_id):
         """
@@ -103,7 +103,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Creature API
 
@@ -113,7 +113,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/creature-family/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature_family(self, region, locale, creature_family_id):
         """
@@ -121,7 +121,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/creature-family/{creature_family_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature_types_index(self, region, locale):
         """
@@ -129,7 +129,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/creature-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature_type(self, region, locale, creature_type_id):
         """
@@ -137,7 +137,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/creature-type/{creature_type_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature(self, region, locale, creature_id):
         """
@@ -145,7 +145,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/creature/{creature_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature_display_media(self, region, locale, creature_display_id):
         """
@@ -153,7 +153,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/creature-display/{creature_display_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_creature_family_media(self, region, locale, creature_family_id):
         """
@@ -161,7 +161,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/creature-family/{creature_family_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Guild Crest API
 
@@ -171,7 +171,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/guild-crest/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_guild_crest_border_media(self, region, locale, border_id):
         """
@@ -179,7 +179,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/guild-crest/border/{border_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_guild_crest_emblem_media(self, region, locale, emblem_id):
         """
@@ -187,7 +187,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/guild-crest/emblem/{emblem_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Item API
 
@@ -197,7 +197,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item-class/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item_class(self, region, locale, item_class_id):
         """
@@ -205,7 +205,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item-class/{item_class_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item_sets_index(self, region, locale):
         """
@@ -213,7 +213,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item-set/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item_set(self, region, locale, item_set_id):
         """
@@ -221,7 +221,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item-set/{item_set_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item_subclass(
         self, region, locale, item_class_id, item_subclass_id
@@ -231,7 +231,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item(self, region, locale, item_id):
         """
@@ -239,7 +239,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/item/{item_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_item_media(self, region, locale, item_id):
         """
@@ -247,7 +247,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/item/{item_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Journal API
 
@@ -257,7 +257,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-expansion/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_expansion(self, region, locale, journal_expansion_id):
         """
@@ -265,7 +265,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-expansion/{journal_expansion_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_encounters_index(self, region, locale):
         """
@@ -273,7 +273,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-encounter/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_encounter(self, region, locale, journal_encounter_id):
         """
@@ -281,7 +281,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-encounter/{journal_encounter_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_instances_index(self, region, locale):
         """
@@ -289,7 +289,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-instance/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_instance(self, region, locale, journal_instance_id):
         """
@@ -297,7 +297,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/journal-instance/{journal_instance_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_journal_instance_media(self, region, locale, journal_instance_id):
         """
@@ -305,7 +305,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/journal-instance/{journal_instance_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Modified Crafting API
 
@@ -315,7 +315,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/modified-crafting/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_category_index(self, region, locale):
         """
@@ -323,7 +323,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/modified-crafting/category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_category(self, region, locale, category_id):
         """
@@ -331,7 +331,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/modified-crafting/category/{category_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_reagent_slot_type_index(self, region, locale):
         """
@@ -339,7 +339,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/modified-crafting/reagent-slot-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_reagent_slot_type(
         self, region, locale, slot_type_id
@@ -351,7 +351,7 @@ class GameDataApi(Api):
             f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
         )
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Mount API
 
@@ -361,7 +361,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mount/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mount(self, region, locale, mount_id):
         """
@@ -369,7 +369,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mount/{mount_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Mythic Keystone Affix API
 
@@ -379,7 +379,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/keystone-affix/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_affix(self, region, locale, keystone_affix_id):
         """
@@ -387,7 +387,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/keystone-affix/{keystone_affix_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_affix_media(
         self, region, locale, keystone_affix_id
@@ -397,7 +397,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/keystone-affix/{keystone_affix_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Mythic Keystone Dungeon API
 
@@ -407,7 +407,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/dungeon/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_dungeon(self, region, locale, dungeon_id):
         """
@@ -415,7 +415,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/dungeon/{dungeon_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_index(self, region, locale):
         """
@@ -424,7 +424,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_periods_index(self, region, locale):
         """
@@ -432,7 +432,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/period/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_period(self, region, locale, period_id):
         """
@@ -440,7 +440,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/period/{period_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_seasons_index(self, region, locale):
         """
@@ -448,7 +448,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/season/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_season(self, region, locale, season_id):
         """
@@ -456,7 +456,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/mythic-keystone/season/{season_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Mythic Keystone Leaderboard API
 
@@ -469,7 +469,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_leaderboard(
         self, region, locale, connected_realm_id, dungeon_id, period_id
@@ -479,7 +479,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/{dungeon_id}/period/{period_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Mythic Raid Leaderboard API
 
@@ -489,7 +489,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/leaderboard/hall-of-fame/{raid}/{faction}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Pet API
 
@@ -499,7 +499,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pet/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pet(self, region, locale, pet_id):
         """
@@ -507,7 +507,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pet/{pet_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pet_media(self, region, locale, pet_id):
         """
@@ -515,7 +515,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/pet/{pet_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pet_abilities_index(self, region, locale):
         """
@@ -523,7 +523,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pet-ability/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pet_ability(self, region, locale, pet_ability_id):
         """
@@ -531,7 +531,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pet-ability/{pet_ability_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pet_ability_media(self, region, locale, pet_ability_id):
         """
@@ -539,7 +539,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/pet-ability/{pet_ability_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Playable Class API
 
@@ -549,7 +549,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-class/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_playable_class(self, region, locale, class_id):
         """
@@ -557,7 +557,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-class/{class_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_playable_class_media(self, region, locale, playable_class_id):
         """
@@ -565,7 +565,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/playable-class/{playable_class_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_talent_slots(self, region, locale, class_id):
         """
@@ -573,7 +573,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-class/{class_id}/pvp-talent-slots"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Playable Race API
 
@@ -583,7 +583,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-race/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_playable_race(self, region, locale, playable_race_id):
         """
@@ -591,7 +591,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-race/{playable_race_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Playable Specialization API
 
@@ -601,7 +601,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-specialization/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_playable_specialization(self, region, locale, spec_id):
         """
@@ -609,7 +609,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/playable-specialization/{spec_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_playable_specialization_media(self, region, locale, spec_id):
         """
@@ -617,7 +617,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/playable-specialization/{spec_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Power Type API
 
@@ -627,7 +627,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/power-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_power_type(self, region, locale, power_type_id):
         """
@@ -635,7 +635,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/power-type/{power_type_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Profession API
 
@@ -645,7 +645,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/profession/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_profession(self, region, locale, profession_id):
         """
@@ -653,7 +653,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/profession/{profession_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_profession_media(self, region, locale, profession_id):
         """
@@ -661,7 +661,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/profession/{profession_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_profession_skill_tier(
         self, region, locale, profession_id, skill_tier_id
@@ -673,7 +673,7 @@ class GameDataApi(Api):
             f"/data/wow/profession/{profession_id}/skill-tier/{skill_tier_id}"
         )
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_recipe(self, region, locale, recipe_id):
         """
@@ -681,7 +681,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/recipe/{recipe_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_recipe_media(self, region, locale, recipe_id):
         """
@@ -689,7 +689,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/recipe/{recipe_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # PvP Season API
 
@@ -699,7 +699,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-season/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_season(self, region, locale, pvp_season_id):
         """
@@ -707,7 +707,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-season/{pvp_season_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_leaderboards_index(self, region, locale, pvp_season_id):
         """
@@ -717,7 +717,7 @@ class GameDataApi(Api):
             f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/index"
         )
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_leaderboard(self, region, locale, pvp_season_id, pvp_bracket):
         """
@@ -725,7 +725,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/{pvp_bracket}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_rewards_index(self, region, locale, pvp_season_id):
         """
@@ -733,7 +733,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-season/{pvp_season_id}/pvp-reward/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # PvP Tier API
 
@@ -743,7 +743,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/pvp-tier/{pvp_tier_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_tiers_index(self, region, locale):
         """
@@ -751,7 +751,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-tier/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_tier(self, region, locale, pvp_tier_id):
         """
@@ -759,7 +759,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-tier/{pvp_tier_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Quest API
 
@@ -769,7 +769,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest(self, region, locale, quest_id):
         """
@@ -777,7 +777,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/{quest_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_categories_index(self, region, locale):
         """
@@ -786,7 +786,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_category(self, region, locale, quest_category_id):
         """
@@ -794,7 +794,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/category/{quest_category_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_areas_index(self, region, locale):
         """
@@ -802,7 +802,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/area/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_area(self, region, locale, quest_area_id):
         """
@@ -810,7 +810,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/area/{quest_area_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_types_index(self, region, locale):
         """
@@ -819,7 +819,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_quest_type(self, region, locale, quest_type_id):
         """
@@ -827,7 +827,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/quest/type/{quest_type_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Realm API
 
@@ -837,7 +837,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/realm/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_realm(self, region, locale, realm_slug):
         """
@@ -845,7 +845,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/realm/{realm_slug}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Region API
 
@@ -855,7 +855,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/region/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_region(self, region, locale, region_id):
         """
@@ -863,7 +863,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/region/{region_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Reputations API
 
@@ -873,7 +873,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/reputation-faction/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_reputation_faction(self, region, locale, reputation_faction_id):
         """
@@ -881,7 +881,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/reputation-faction/{reputation_faction_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_reputation_tiers_index(self, region, locale):
         """
@@ -889,7 +889,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/reputation-tiers/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_reputation_tier(self, region, locale, reputation_tiers_id):
         """
@@ -897,7 +897,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/reputation-tiers/{reputation_tiers_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Spell API
 
@@ -907,7 +907,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/spell/{spell_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_spell_media(self, region, locale, spell_id):
         """
@@ -915,7 +915,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/media/spell/{spell_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Talent API
 
@@ -925,7 +925,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/talent/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_talent(self, region, locale, talent_id):
         """
@@ -933,7 +933,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/talent/{talent_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_talents_index(self, region, locale):
         """
@@ -941,7 +941,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-talent/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_pvp_talent(self, region, locale, pvp_talent_id):
         """
@@ -949,7 +949,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/pvp-talent/{pvp_talent_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # Title API
 
@@ -959,7 +959,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/title/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     def get_title(self, region, locale, title_id):
         """
@@ -967,7 +967,7 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/title/{title_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
 
     # WoW Token API
 
@@ -977,4 +977,4 @@ class GameDataApi(Api):
         """
         resource = f"/data/wow/token/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
-        return super().get_resource(resource, region, **query_params)
+        return super().get_resource(resource, region, query_params)
