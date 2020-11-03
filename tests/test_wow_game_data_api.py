@@ -40,7 +40,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/achievement/index", params=params
+            "https://us.api.blizzard.com/data/wow/achievement/index",
+            params=params,
         )
 
     def test_get_achievement(self, success_response_mock):
@@ -62,7 +63,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/achievement/6", params=params
+            "https://us.api.blizzard.com/data/wow/media/achievement/6",
+            params=params,
         )
 
     # Auction House API
@@ -89,7 +91,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/azerite-essence/index", params=params
+            "https://us.api.blizzard.com/data/wow/azerite-essence/index",
+            params=params,
         )
 
     def test_get_azerite_essence(self, success_response_mock):
@@ -100,7 +103,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/azerite-essence/2", params=params
+            "https://us.api.blizzard.com/data/wow/azerite-essence/2",
+            params=params,
         )
 
     def test_get_azerite_essence_media(self, success_response_mock):
@@ -125,7 +129,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/connected-realm/index", params=params
+            "https://us.api.blizzard.com/data/wow/connected-realm/index",
+            params=params,
         )
 
     def test_get_connected_realm(self, success_response_mock):
@@ -136,7 +141,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/connected-realm/1", params=params
+            "https://us.api.blizzard.com/data/wow/connected-realm/1",
+            params=params,
         )
 
     # Creature API
@@ -149,7 +155,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/creature-family/index", params=params
+            "https://us.api.blizzard.com/data/wow/creature-family/index",
+            params=params,
         )
 
     def test_get_creature_family(self, success_response_mock):
@@ -160,7 +167,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/creature-family/1", params=params
+            "https://us.api.blizzard.com/data/wow/creature-family/1",
+            params=params,
         )
 
     def test_get_creature_types_index(self, success_response_mock):
@@ -171,7 +179,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/creature-type/index", params=params
+            "https://us.api.blizzard.com/data/wow/creature-type/index",
+            params=params,
         )
 
     def test_get_creature_type(self, success_response_mock):
@@ -182,7 +191,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/creature-type/1", params=params
+            "https://us.api.blizzard.com/data/wow/creature-type/1",
+            params=params,
         )
 
     def test_get_creature(self, success_response_mock):
@@ -230,7 +240,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/guild-crest/index", params=params
+            "https://us.api.blizzard.com/data/wow/guild-crest/index",
+            params=params,
         )
 
     def test_get_guild_crest_border_media(self, success_response_mock):
@@ -267,7 +278,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/item-class/index", params=params
+            "https://us.api.blizzard.com/data/wow/item-class/index",
+            params=params,
         )
 
     def test_get_item_class(self, success_response_mock):
@@ -289,7 +301,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/item-set/index", params=params
+            "https://us.api.blizzard.com/data/wow/item-set/index",
+            params=params,
         )
 
     def test_get_item_set(self, success_response_mock):
@@ -334,7 +347,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/item/9999", params=params
+            "https://us.api.blizzard.com/data/wow/media/item/9999",
+            params=params,
         )
 
     # Journal API
@@ -359,7 +373,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/journal-expansion/68", params=params
+            "https://us.api.blizzard.com/data/wow/journal-expansion/68",
+            params=params,
         )
 
     def test_get_journal_encounters_index(self, success_response_mock):
@@ -382,7 +397,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/journal-encounter/89", params=params
+            "https://us.api.blizzard.com/data/wow/journal-encounter/89",
+            params=params,
         )
 
     def test_get_journal_instances_index(self, success_response_mock):
@@ -393,7 +409,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/journal-instance/index", params=params
+            "https://us.api.blizzard.com/data/wow/journal-instance/index",
+            params=params,
         )
 
     def test_get_journal_instance(self, success_response_mock):
@@ -404,7 +421,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/journal-instance/63", params=params
+            "https://us.api.blizzard.com/data/wow/journal-instance/63",
+            params=params,
         )
 
     def test_get_journal_instance_media(self, success_response_mock):
@@ -457,8 +475,12 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    def test_get_modified_crafting_reagent_slot_type_index(self, success_response_mock):
-        self.api.game_data.get_modified_crafting_reagent_slot_type_index("us", "en_US")
+    def test_get_modified_crafting_reagent_slot_type_index(
+        self, success_response_mock
+    ):
+        self.api.game_data.get_modified_crafting_reagent_slot_type_index(
+            "us", "en_US"
+        )
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -469,8 +491,12 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    def test_get_modified_crafting_reagent_slot_type(self, success_response_mock):
-        self.api.game_data.get_modified_crafting_reagent_slot_type("us", "en_US", 16)
+    def test_get_modified_crafting_reagent_slot_type(
+        self, success_response_mock
+    ):
+        self.api.game_data.get_modified_crafting_reagent_slot_type(
+            "us", "en_US", 16
+        )
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -515,7 +541,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/keystone-affix/index", params=params
+            "https://us.api.blizzard.com/data/wow/keystone-affix/index",
+            params=params,
         )
 
     def test_get_mythic_keystone_affix(self, success_response_mock):
@@ -526,7 +553,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/keystone-affix/3", params=params
+            "https://us.api.blizzard.com/data/wow/keystone-affix/3",
+            params=params,
         )
 
     def test_get_mythic_keystone_affix_media(self, success_response_mock):
@@ -537,7 +565,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/keystone-affix/1", params=params
+            "https://us.api.blizzard.com/data/wow/media/keystone-affix/1",
+            params=params,
         )
 
     # Mythic Keystone Dungeon API
@@ -574,7 +603,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/mythic-keystone/index", params=params
+            "https://us.api.blizzard.com/data/wow/mythic-keystone/index",
+            params=params,
         )
 
     def test_get_mythic_keystone_periods_index(self, success_response_mock):
@@ -627,8 +657,12 @@ class TestWowGameDataApi:
 
     # Mythic Keystone Leaderboard API
 
-    def test_get_mythic_keystone_leaderboards_index(self, success_response_mock):
-        self.api.game_data.get_mythic_keystone_leaderboards_index("us", "en_US", 1)
+    def test_get_mythic_keystone_leaderboards_index(
+        self, success_response_mock
+    ):
+        self.api.game_data.get_mythic_keystone_leaderboards_index(
+            "us", "en_US", 1
+        )
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -640,7 +674,9 @@ class TestWowGameDataApi:
         )
 
     def test_get_mythic_keystone_leaderboard(self, success_response_mock):
-        self.api.game_data.get_mythic_keystone_leaderboard("us", "en_US", 1, 2, 3)
+        self.api.game_data.get_mythic_keystone_leaderboard(
+            "us", "en_US", 1, 2, 3
+        )
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -654,7 +690,9 @@ class TestWowGameDataApi:
     # Mythic Raid Leaderboard API
 
     def test_get_mythic_raid_leaderboard(self, success_response_mock):
-        self.api.game_data.get_mythic_raid_leaderboard("us", "en_US", "uldir", "horde")
+        self.api.game_data.get_mythic_raid_leaderboard(
+            "us", "en_US", "uldir", "horde"
+        )
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -708,7 +746,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/pet-ability/index", params=params
+            "https://us.api.blizzard.com/data/wow/pet-ability/index",
+            params=params,
         )
 
     def test_get_pet_ability(self, success_response_mock):
@@ -719,7 +758,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/pet-ability/110", params=params
+            "https://us.api.blizzard.com/data/wow/pet-ability/110",
+            params=params,
         )
 
     def test_get_pet_ability_media(self, success_response_mock):
@@ -730,7 +770,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/pet-ability/110", params=params
+            "https://us.api.blizzard.com/data/wow/media/pet-ability/110",
+            params=params,
         )
 
     # Playable Class API
@@ -743,7 +784,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/playable-class/index", params=params
+            "https://us.api.blizzard.com/data/wow/playable-class/index",
+            params=params,
         )
 
     def test_get_playable_class(self, success_response_mock):
@@ -754,7 +796,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/playable-class/7", params=params
+            "https://us.api.blizzard.com/data/wow/playable-class/7",
+            params=params,
         )
 
     def test_get_playable_class_media(self, success_response_mock):
@@ -765,7 +808,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/playable-class/7", params=params
+            "https://us.api.blizzard.com/data/wow/media/playable-class/7",
+            params=params,
         )
 
     def test_get_pvp_talent_slots(self, success_response_mock):
@@ -790,7 +834,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/playable-race/index", params=params
+            "https://us.api.blizzard.com/data/wow/playable-race/index",
+            params=params,
         )
 
     def test_get_playable_race(self, success_response_mock):
@@ -801,7 +846,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/playable-race/2", params=params
+            "https://us.api.blizzard.com/data/wow/playable-race/2",
+            params=params,
         )
 
     # Playable Specialization API
@@ -831,7 +877,9 @@ class TestWowGameDataApi:
         )
 
     def test_get_playable_specialization_media(self, success_response_mock):
-        self.api.game_data.get_playable_specialization_media("us", "en_US", 262)
+        self.api.game_data.get_playable_specialization_media(
+            "us", "en_US", 262
+        )
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -852,7 +900,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/power-type/index", params=params
+            "https://us.api.blizzard.com/data/wow/power-type/index",
+            params=params,
         )
 
     def test_get_power_type(self, success_response_mock):
@@ -876,7 +925,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/profession/index", params=params
+            "https://us.api.blizzard.com/data/wow/profession/index",
+            params=params,
         )
 
     def test_get_profession(self, success_response_mock):
@@ -887,7 +937,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/profession/164", params=params
+            "https://us.api.blizzard.com/data/wow/profession/164",
+            params=params,
         )
 
     def test_get_profession_media(self, success_response_mock):
@@ -898,7 +949,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/profession/164", params=params
+            "https://us.api.blizzard.com/data/wow/media/profession/164",
+            params=params,
         )
 
     def test_get_profession_skill_tier(self, success_response_mock):
@@ -932,7 +984,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/recipe/1631", params=params
+            "https://us.api.blizzard.com/data/wow/media/recipe/1631",
+            params=params,
         )
 
     # PvP Season API
@@ -945,7 +998,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/pvp-season/index", params=params
+            "https://us.api.blizzard.com/data/wow/pvp-season/index",
+            params=params,
         )
 
     def test_get_pvp_season(self, success_response_mock):
@@ -1005,7 +1059,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/pvp-tier/1", params=params
+            "https://us.api.blizzard.com/data/wow/media/pvp-tier/1",
+            params=params,
         )
 
     def test_get_pvp_tiers_index(self, success_response_mock):
@@ -1016,7 +1071,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/pvp-tier/index", params=params
+            "https://us.api.blizzard.com/data/wow/pvp-tier/index",
+            params=params,
         )
 
     def test_get_pvp_tier(self, success_response_mock):
@@ -1062,7 +1118,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/quest/category/index", params=params
+            "https://us.api.blizzard.com/data/wow/quest/category/index",
+            params=params,
         )
 
     def test_get_quest_category(self, success_response_mock):
@@ -1073,7 +1130,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/quest/category/1", params=params
+            "https://us.api.blizzard.com/data/wow/quest/category/1",
+            params=params,
         )
 
     def test_get_quest_areas_index(self, success_response_mock):
@@ -1084,7 +1142,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/quest/area/index", params=params
+            "https://us.api.blizzard.com/data/wow/quest/area/index",
+            params=params,
         )
 
     def test_get_quest_area(self, success_response_mock):
@@ -1106,7 +1165,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/quest/type/index", params=params
+            "https://us.api.blizzard.com/data/wow/quest/type/index",
+            params=params,
         )
 
     def test_get_quest_type(self, success_response_mock):
@@ -1141,7 +1201,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/realm/tichondrius", params=params
+            "https://us.api.blizzard.com/data/wow/realm/tichondrius",
+            params=params,
         )
 
     # Region API
@@ -1190,7 +1251,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/reputation-faction/21", params=params
+            "https://us.api.blizzard.com/data/wow/reputation-faction/21",
+            params=params,
         )
 
     def test_get_reputation_tiers_index(self, success_response_mock):
@@ -1201,7 +1263,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/reputation-tiers/index", params=params
+            "https://us.api.blizzard.com/data/wow/reputation-tiers/index",
+            params=params,
         )
 
     def test_get_reputation_tier(self, success_response_mock):
@@ -1212,7 +1275,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/reputation-tiers/2", params=params
+            "https://us.api.blizzard.com/data/wow/reputation-tiers/2",
+            params=params,
         )
 
     # Spell API
@@ -1236,7 +1300,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/media/spell/196607", params=params
+            "https://us.api.blizzard.com/data/wow/media/spell/196607",
+            params=params,
         )
 
     # Talent API
@@ -1271,7 +1336,8 @@ class TestWowGameDataApi:
             "access_token": self.access_token,
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/wow/pvp-talent/index", params=params
+            "https://us.api.blizzard.com/data/wow/pvp-talent/index",
+            params=params,
         )
 
     def test_get_pvp_talent(self, success_response_mock):

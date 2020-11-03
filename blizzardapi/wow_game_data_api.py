@@ -17,7 +17,9 @@ class GameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_achievement_category(self, region, locale, achievement_category_id):
+    def get_achievement_category(
+        self, region, locale, achievement_category_id
+    ):
         """
         Achievement API - Returns an achievement category by ID.
         """
@@ -221,13 +223,13 @@ class GameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_item_subclass(self, region, locale, item_class_id, item_subclass_id):
+    def get_item_subclass(
+        self, region, locale, item_class_id, item_subclass_id
+    ):
         """
         Item API - Returns an item subclass by ID.
         """
-        resource = (
-            f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
-        )
+        resource = f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -339,11 +341,15 @@ class GameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_modified_crafting_reagent_slot_type(self, region, locale, slot_type_id):
+    def get_modified_crafting_reagent_slot_type(
+        self, region, locale, slot_type_id
+    ):
         """
         Modified Crafting API - Returns a Modified Crafting reagent slot type by ID.
         """
-        resource = f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
+        resource = (
+            f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
+        )
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -383,7 +389,9 @@ class GameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_mythic_keystone_affix_media(self, region, locale, keystone_affix_id):
+    def get_mythic_keystone_affix_media(
+        self, region, locale, keystone_affix_id
+    ):
         """
         Mythic Keystone Affix API - Returns media for a mythic keystone affix by ID.
         """
@@ -459,9 +467,7 @@ class GameDataApi(Api):
         Mythic Keystone Leaderboard API - Returns an index of Mythic Keystone Leaderboard dungeon
         instances for a connected realm.
         """
-        resource = (
-            f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
-        )
+        resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -657,11 +663,15 @@ class GameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
-    def get_profession_skill_tier(self, region, locale, profession_id, skill_tier_id):
+    def get_profession_skill_tier(
+        self, region, locale, profession_id, skill_tier_id
+    ):
         """
         Profession API - Returns a skill tier for a profession by ID.
         """
-        resource = f"/data/wow/profession/{profession_id}/skill-tier/{skill_tier_id}"
+        resource = (
+            f"/data/wow/profession/{profession_id}/skill-tier/{skill_tier_id}"
+        )
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 
@@ -703,7 +713,9 @@ class GameDataApi(Api):
         """
         PvP Season API - Returns an index of PvP leaderboards for a PvP season.
         """
-        resource = f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/index"
+        resource = (
+            f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/index"
+        )
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, **query_params)
 

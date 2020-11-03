@@ -11,4 +11,6 @@ def get_success_response():
 
 @pytest.fixture
 def success_response_mock(mocker):
-    return mocker.patch("requests.Session.get", return_value=get_success_response())
+    return mocker.patch(
+        "requests.Session.get", return_value=get_success_response()
+    )

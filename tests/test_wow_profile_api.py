@@ -9,7 +9,9 @@ class TestWowProfileApi(object):
     # Account Profile API
 
     def test_get_account_profile_summary(self, success_response_mock):
-        self.api.profile.get_account_profile_summary("us", "en_US", "new_access_token")
+        self.api.profile.get_account_profile_summary(
+            "us", "en_US", "new_access_token"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -19,7 +21,9 @@ class TestWowProfileApi(object):
             "https://us.api.blizzard.com/profile/user/wow", params=params
         )
 
-    def test_get_protected_character_profile_summary(self, success_response_mock):
+    def test_get_protected_character_profile_summary(
+        self, success_response_mock
+    ):
         self.api.profile.get_protected_character_profile_summary(
             "us", "en_US", "new_access_token", 1, 9000
         )
@@ -43,10 +47,13 @@ class TestWowProfileApi(object):
             "access_token": "new_access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/profile/user/wow/collections", params=params
+            "https://us.api.blizzard.com/profile/user/wow/collections",
+            params=params,
         )
 
-    def test_get_account_mounts_collection_summary(self, success_response_mock):
+    def test_get_account_mounts_collection_summary(
+        self, success_response_mock
+    ):
         self.api.profile.get_account_mounts_collection_summary(
             "us", "en_US", "new_access_token"
         )
@@ -136,7 +143,9 @@ class TestWowProfileApi(object):
             params=params,
         )
 
-    def test_get_character_mounts_collection_index(self, success_response_mock):
+    def test_get_character_mounts_collection_index(
+        self, success_response_mock
+    ):
         self.api.profile.get_character_mounts_collection_index(
             "us", "en_US", "khadgar", "asmon"
         )
@@ -181,7 +190,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_dungeons(self, success_response_mock):
-        self.api.profile.get_character_dungeons("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_dungeons(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -239,7 +250,9 @@ class TestWowProfileApi(object):
     # Character Media API
 
     def test_get_character_media_summary(self, success_response_mock):
-        self.api.profile.get_character_media_summary("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_media_summary(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -252,7 +265,9 @@ class TestWowProfileApi(object):
 
     # Character Mythic Keystone Profile API
 
-    def test_get_character_mythic_keystone_profile_index(self, success_response_mock):
+    def test_get_character_mythic_keystone_profile_index(
+        self, success_response_mock
+    ):
         self.api.profile.get_character_mythic_keystone_profile_index(
             "us", "en_US", "blackmoore", "ayanda"
         )
@@ -319,7 +334,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_profile_status(self, success_response_mock):
-        self.api.profile.get_character_profile_status("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_profile_status(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -347,7 +364,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_pvp_summary(self, success_response_mock):
-        self.api.profile.get_character_pvp_summary("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_pvp_summary(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -361,7 +380,9 @@ class TestWowProfileApi(object):
     # Character Quests API
 
     def test_get_character_quests(self, success_response_mock):
-        self.api.profile.get_character_quests("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_quests(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -404,7 +425,9 @@ class TestWowProfileApi(object):
 
     # Character Specializations API
 
-    def test_get_character_specializations_summary(self, success_response_mock):
+    def test_get_character_specializations_summary(
+        self, success_response_mock
+    ):
         self.api.profile.get_character_specializations_summary(
             "us", "en_US", "khadgar", "asmon"
         )
@@ -437,7 +460,9 @@ class TestWowProfileApi(object):
     # Character Titles API
 
     def test_get_character_titles_summary(self, success_response_mock):
-        self.api.profile.get_character_titles_summary("us", "en_US", "khadgar", "asmon")
+        self.api.profile.get_character_titles_summary(
+            "us", "en_US", "khadgar", "asmon"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -463,7 +488,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_activity(self, success_response_mock):
-        self.api.profile.get_guild_activity("us", "en_US", "khadgar", "bestguild")
+        self.api.profile.get_guild_activity(
+            "us", "en_US", "khadgar", "bestguild"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -475,7 +502,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_achievements(self, success_response_mock):
-        self.api.profile.get_guild_achievements("us", "en_US", "khadgar", "bestguild")
+        self.api.profile.get_guild_achievements(
+            "us", "en_US", "khadgar", "bestguild"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -487,7 +516,9 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_roster(self, success_response_mock):
-        self.api.profile.get_guild_roster("us", "en_US", "khadgar", "bestguild")
+        self.api.profile.get_guild_roster(
+            "us", "en_US", "khadgar", "bestguild"
+        )
         params = {
             "namespace": "profile-us",
             "locale": "en_US",

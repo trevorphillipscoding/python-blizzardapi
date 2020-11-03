@@ -23,7 +23,9 @@ class Api:
             raise BlizzardApiRequestException(str(e))
 
         if not response.ok:
-            msg = f"Invalid response - {response.status_code} for {response.url}"
+            msg = (
+                f"Invalid response - {response.status_code} for {response.url}"
+            )
             raise BlizzardApiRequestException(msg)
 
         try:
