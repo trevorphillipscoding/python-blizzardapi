@@ -2,16 +2,14 @@ import requests
 from requests.exceptions import RequestException
 
 from .exceptions import BlizzardApiRequestException
+from .oauth_api import OauthApi
 
 
-class Api:
+class Api(OauthApi):
     def __init__(self, client_id, client_secret):
         self.client_id = client_id
         self._client_secret = client_secret
         self._access_token = None
-
-        self._oauth_url = "https://{0}.battle.net{1}"
-        self._oauth_url_cn = "https://www.battlenet.com.cn{0}"
 
         self._api_url = "https://{0}.api.blizzard.com{1}"
         self._api_url_cn = "https://gateway.battlenet.com.cn{0}"
@@ -20,9 +18,9 @@ class Api:
 
     def format_oauth_url(self, resource, region):
         if region == "cn":
-            url = self._oauth_url_cn.format(resource)
+            url = self.oauth_url_cn.format(resource)
         else:
-            url = self._oauth_url.format(region, resource)
+            url = self.oauth_url.format(region, resource)
 
         return url
 

@@ -1,5 +1,6 @@
-from .api import Api
 from urllib import parse
+
+from .api import Api
 
 
 class BattlenetOauthApi(Api):
@@ -13,9 +14,7 @@ class BattlenetOauthApi(Api):
 
     # User Authentication
 
-    def generate_authorization_request(
-        self, region, redirect_uri, scope, state
-    ):
+    def authorization_request(self, region, redirect_uri, scope, state):
         """
         User Authentication - Returns a string url that is used to request authorization from a user.
         """
