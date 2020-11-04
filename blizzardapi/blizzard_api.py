@@ -1,6 +1,6 @@
-from .battlenet_api import BattlenetApi
-from .diablo3_api import Diablo3Api
-from .wow_api import WowApi
+from .battlenet.battlenet_api import BattlenetApi
+from .diablo3.diablo3_api import Diablo3Api
+from .wow.wow_api import WowApi
 
 
 class BlizzardApi:

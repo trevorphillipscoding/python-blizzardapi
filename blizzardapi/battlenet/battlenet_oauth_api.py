@@ -1,6 +1,6 @@
 from urllib import parse
 
-from .api import Api
+from ..api import Api
 
 
 class BattlenetOauthApi(Api):
