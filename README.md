@@ -53,10 +53,3 @@ GET /profile/user/wow/collections
 GET /profile/user/wow/collections/pets
 GET /profile/user/wow/collections/mounts
 ```
-
-# Todo
-
-- Support search endpoints.
-- Support other API's besides WoW.
-- Support classic namespace for WoW API.
-- Complete full coverage and testing.
