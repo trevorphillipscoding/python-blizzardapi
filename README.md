@@ -1,4 +1,5 @@
 # python-blizzardapi
+![Python package](https://github.com/trevorphillips/python-blizzardapi/workflows/Python%20package/badge.svg) [![codecov](https://codecov.io/gh/trevorphillips/python-blizzardapi/branch/main/graph/badge.svg?token=67MW8UHAG1)](https://codecov.io/gh/trevorphillips/python-blizzardapi)
 
 python-blizzardapi is a client library for Blizzard's APIs.
 
