@@ -23,7 +23,7 @@ Python (3.6, 3.7, 3.8, 3.9)
 
 # Installing
 
-` pip install python-blizzardapi`
+`pip install python-blizzardapi`
     
 # Example
 
