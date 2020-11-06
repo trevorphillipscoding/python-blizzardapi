@@ -13,7 +13,7 @@ class WowGameDataApi(Api):
         """
         Achievement API - Returns an index of achievement categories.
         """
-        resource = f"/data/wow/achievement-category/index"
+        resource = "/data/wow/achievement-category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -31,7 +31,7 @@ class WowGameDataApi(Api):
         """
         Achievement API - Returns an index of achievements.
         """
-        resource = f"/data/wow/achievement/index"
+        resource = "/data/wow/achievement/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -67,7 +67,7 @@ class WowGameDataApi(Api):
         """
         Azerite Essence API - Returns an index of azerite essences.
         """
-        resource = f"/data/wow/azerite-essence/index"
+        resource = "/data/wow/azerite-essence/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -93,7 +93,7 @@ class WowGameDataApi(Api):
         """
         Connected Realm API - Returns an index of connected realms.
         """
-        resource = f"/data/wow/connected-realm/index"
+        resource = "/data/wow/connected-realm/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -111,7 +111,7 @@ class WowGameDataApi(Api):
         """
         Creature API - Returns an index of creature families.
         """
-        resource = f"/data/wow/creature-family/index"
+        resource = "/data/wow/creature-family/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -127,7 +127,7 @@ class WowGameDataApi(Api):
         """
         Creature API - Returns an index of creature types.
         """
-        resource = f"/data/wow/creature-type/index"
+        resource = "/data/wow/creature-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -169,7 +169,7 @@ class WowGameDataApi(Api):
         """
         Guild Crest API - Returns an index of guild crest media.
         """
-        resource = f"/data/wow/guild-crest/index"
+        resource = "/data/wow/guild-crest/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -195,7 +195,7 @@ class WowGameDataApi(Api):
         """
         Item API - Returns an index of item classes.
         """
-        resource = f"/data/wow/item-class/index"
+        resource = "/data/wow/item-class/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -211,7 +211,7 @@ class WowGameDataApi(Api):
         """
         Item API - Returns an index of item sets.
         """
-        resource = f"/data/wow/item-set/index"
+        resource = "/data/wow/item-set/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -255,7 +255,7 @@ class WowGameDataApi(Api):
         """
         Journal API - Returns an index of journal expansions.
         """
-        resource = f"/data/wow/journal-expansion/index"
+        resource = "/data/wow/journal-expansion/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -271,7 +271,7 @@ class WowGameDataApi(Api):
         """
         Journal API - Returns an index of journal encounters.
         """
-        resource = f"/data/wow/journal-encounter/index"
+        resource = "/data/wow/journal-encounter/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -287,7 +287,7 @@ class WowGameDataApi(Api):
         """
         Journal API - Returns an index of journal instances.
         """
-        resource = f"/data/wow/journal-instance/index"
+        resource = "/data/wow/journal-instance/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -313,21 +313,23 @@ class WowGameDataApi(Api):
         """
         Modified Crafting API - Returns the parent index for Modified Crafting.
         """
-        resource = f"/data/wow/modified-crafting/index"
+        resource = "/data/wow/modified-crafting/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_category_index(self, region, locale):
         """
-        Modified Crafting API - Returns the index of Modified Crafting categories.
+        Modified Crafting API - Returns the index of Modified Crafting
+        categories.
         """
-        resource = f"/data/wow/modified-crafting/category/index"
+        resource = "/data/wow/modified-crafting/category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_modified_crafting_category(self, region, locale, category_id):
         """
-        Modified Crafting API - Returns the index of Modified Crafting categories.
+        Modified Crafting API - Returns the index of Modified Crafting
+        categories.
         """
         resource = f"/data/wow/modified-crafting/category/{category_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -335,9 +337,10 @@ class WowGameDataApi(Api):
 
     def get_modified_crafting_reagent_slot_type_index(self, region, locale):
         """
-        Modified Crafting API - Returns the index of Modified Crafting reagent slot types.
+        Modified Crafting API - Returns the index of Modified Crafting reagent
+        slot types.
         """
-        resource = f"/data/wow/modified-crafting/reagent-slot-type/index"
+        resource = "/data/wow/modified-crafting/reagent-slot-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -345,7 +348,8 @@ class WowGameDataApi(Api):
         self, region, locale, slot_type_id
     ):
         """
-        Modified Crafting API - Returns a Modified Crafting reagent slot type by ID.
+        Modified Crafting API - Returns a Modified Crafting reagent slot type
+        by ID.
         """
         resource = (
             f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
@@ -359,7 +363,7 @@ class WowGameDataApi(Api):
         """
         Mount API - Returns an index of mounts.
         """
-        resource = f"/data/wow/mount/index"
+        resource = "/data/wow/mount/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -375,9 +379,10 @@ class WowGameDataApi(Api):
 
     def get_mythic_keystone_affixes_index(self, region, locale):
         """
-        Mythic Keystone Affix API - Returns an index of mythic keystone affixes.
+        Mythic Keystone Affix API - Returns an index of mythic keystone
+        affixes.
         """
-        resource = f"/data/wow/keystone-affix/index"
+        resource = "/data/wow/keystone-affix/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -393,7 +398,8 @@ class WowGameDataApi(Api):
         self, region, locale, keystone_affix_id
     ):
         """
-        Mythic Keystone Affix API - Returns media for a mythic keystone affix by ID.
+        Mythic Keystone Affix API - Returns media for a mythic keystone affix
+        by ID.
         """
         resource = f"/data/wow/media/keystone-affix/{keystone_affix_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -403,9 +409,10 @@ class WowGameDataApi(Api):
 
     def get_mythic_keystone_dungeons_index(self, region, locale):
         """
-        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone dungeons.
+        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone
+        dungeons.
         """
-        resource = f"/data/wow/mythic-keystone/dungeon/index"
+        resource = "/data/wow/mythic-keystone/dungeon/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -419,18 +426,20 @@ class WowGameDataApi(Api):
 
     def get_mythic_keystone_index(self, region, locale):
         """
-        Mythic Keystone Dungeon API - Returns an index of links to other documents related to
+        Mythic Keystone Dungeon API - Returns an index of links to other
+        documents related to
         Mythic Keystone dungeons.
         """
-        resource = f"/data/wow/mythic-keystone/index"
+        resource = "/data/wow/mythic-keystone/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_mythic_keystone_periods_index(self, region, locale):
         """
-        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone periods.
+        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone
+        periods.
         """
-        resource = f"/data/wow/mythic-keystone/period/index"
+        resource = "/data/wow/mythic-keystone/period/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -444,9 +453,10 @@ class WowGameDataApi(Api):
 
     def get_mythic_keystone_seasons_index(self, region, locale):
         """
-        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone seasons.
+        Mythic Keystone Dungeon API - Returns an index of Mythic Keystone
+        seasons.
         """
-        resource = f"/data/wow/mythic-keystone/season/index"
+        resource = "/data/wow/mythic-keystone/season/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -464,8 +474,8 @@ class WowGameDataApi(Api):
         self, region, locale, connected_realm_id
     ):
         """
-        Mythic Keystone Leaderboard API - Returns an index of Mythic Keystone Leaderboard dungeon
-        instances for a connected realm.
+        Mythic Keystone Leaderboard API - Returns an index of Mythic Keystone
+        Leaderboard dungeon instances for a connected realm.
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
@@ -475,7 +485,8 @@ class WowGameDataApi(Api):
         self, region, locale, connected_realm_id, dungeon_id, period_id
     ):
         """
-        Mythic Keystone Leaderboard API - Returns a weekly Mythic Keystone Leaderboard by period.
+        Mythic Keystone Leaderboard API - Returns a weekly Mythic Keystone
+        Leaderboard by period.
         """
         resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/{dungeon_id}/period/{period_id}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
@@ -485,7 +496,8 @@ class WowGameDataApi(Api):
 
     def get_mythic_raid_leaderboard(self, region, locale, raid, faction):
         """
-        Mythic Raid Leaderboard API - Returns the leaderboard for a given raid and faction.
+        Mythic Raid Leaderboard API - Returns the leaderboard for a given raid
+        and faction.
         """
         resource = f"/data/wow/leaderboard/hall-of-fame/{raid}/{faction}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
@@ -497,7 +509,7 @@ class WowGameDataApi(Api):
         """
         Pet API - Returns an index of battle pets.
         """
-        resource = f"/data/wow/pet/index"
+        resource = "/data/wow/pet/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -521,7 +533,7 @@ class WowGameDataApi(Api):
         """
         Pet API - Returns an index of pet abilities.
         """
-        resource = f"/data/wow/pet-ability/index"
+        resource = "/data/wow/pet-ability/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -547,7 +559,7 @@ class WowGameDataApi(Api):
         """
         Playable Class API - Returns an index of playable classes.
         """
-        resource = f"/data/wow/playable-class/index"
+        resource = "/data/wow/playable-class/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -569,7 +581,8 @@ class WowGameDataApi(Api):
 
     def get_pvp_talent_slots(self, region, locale, class_id):
         """
-        Playable Class API - Returns the PvP talent slots for a playable class by ID.
+        Playable Class API - Returns the PvP talent slots for a playable class
+        by ID.
         """
         resource = f"/data/wow/playable-class/{class_id}/pvp-talent-slots"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -581,7 +594,7 @@ class WowGameDataApi(Api):
         """
         Playable Race API - Returns an index of playable races.
         """
-        resource = f"/data/wow/playable-race/index"
+        resource = "/data/wow/playable-race/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -597,9 +610,10 @@ class WowGameDataApi(Api):
 
     def get_playable_specializations_index(self, region, locale):
         """
-        Playable Specialization API - Returns an index of playable specializations.
+        Playable Specialization API - Returns an index of playable
+        specializations.
         """
-        resource = f"/data/wow/playable-specialization/index"
+        resource = "/data/wow/playable-specialization/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -613,7 +627,8 @@ class WowGameDataApi(Api):
 
     def get_playable_specialization_media(self, region, locale, spec_id):
         """
-        Playable Specialization API - Returns media for a playable specialization by ID.
+        Playable Specialization API - Returns media for a playable
+        specialization by ID.
         """
         resource = f"/data/wow/media/playable-specialization/{spec_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -625,7 +640,7 @@ class WowGameDataApi(Api):
         """
         Power Type API - Returns an index of power types.
         """
-        resource = f"/data/wow/power-type/index"
+        resource = "/data/wow/power-type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -643,7 +658,7 @@ class WowGameDataApi(Api):
         """
         Profession API - Returns an index of professions.
         """
-        resource = f"/data/wow/profession/index"
+        resource = "/data/wow/profession/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -697,7 +712,7 @@ class WowGameDataApi(Api):
         """
         PvP Season API - Returns an index of PvP seasons.
         """
-        resource = f"/data/wow/pvp-season/index"
+        resource = "/data/wow/pvp-season/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -721,7 +736,8 @@ class WowGameDataApi(Api):
 
     def get_pvp_leaderboard(self, region, locale, pvp_season_id, pvp_bracket):
         """
-        PvP Season API - Returns the PvP leaderboard of a specific PvP bracket for a PvP season.
+        PvP Season API - Returns the PvP leaderboard of a specific PvP bracket
+        for a PvP season.
         """
         resource = f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/{pvp_bracket}"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
@@ -749,7 +765,7 @@ class WowGameDataApi(Api):
         """
         PvP Tier API - Returns an index of PvP tiers.
         """
-        resource = f"/data/wow/pvp-tier/index"
+        resource = "/data/wow/pvp-tier/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -767,7 +783,7 @@ class WowGameDataApi(Api):
         """
         Quest API - Returns the parent index for quests.
         """
-        resource = f"/data/wow/quest/index"
+        resource = "/data/wow/quest/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -781,10 +797,11 @@ class WowGameDataApi(Api):
 
     def get_quest_categories_index(self, region, locale):
         """
-        Quest API - Returns an index of quest categories (such as quests for a specific class,
+        Quest API - Returns an index of quest categories (such as quests for a
+        specific class,
         profession, or storyline).
         """
-        resource = f"/data/wow/quest/category/index"
+        resource = "/data/wow/quest/category/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -800,7 +817,7 @@ class WowGameDataApi(Api):
         """
         Quest API - Returns an index of quest areas.
         """
-        resource = f"/data/wow/quest/area/index"
+        resource = "/data/wow/quest/area/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -814,10 +831,11 @@ class WowGameDataApi(Api):
 
     def get_quest_types_index(self, region, locale):
         """
-        Quest API - Returns an index of quest types (such as PvP quests, raid quests, or account
+        Quest API - Returns an index of quest types (such as PvP quests, raid
+        quests, or account
         quests).
         """
-        resource = f"/data/wow/quest/type/index"
+        resource = "/data/wow/quest/type/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -835,7 +853,7 @@ class WowGameDataApi(Api):
         """
         Realm API - Returns an index of realms.
         """
-        resource = f"/data/wow/realm/index"
+        resource = "/data/wow/realm/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -853,7 +871,7 @@ class WowGameDataApi(Api):
         """
         Region API - Returns an index of regions.
         """
-        resource = f"/data/wow/region/index"
+        resource = "/data/wow/region/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -871,7 +889,7 @@ class WowGameDataApi(Api):
         """
         Reputations API - Returns an index of reputation factions.
         """
-        resource = f"/data/wow/reputation-faction/index"
+        resource = "/data/wow/reputation-faction/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -887,7 +905,7 @@ class WowGameDataApi(Api):
         """
         Reputations API - Returns an index of reputation tiers.
         """
-        resource = f"/data/wow/reputation-tiers/index"
+        resource = "/data/wow/reputation-tiers/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -923,7 +941,7 @@ class WowGameDataApi(Api):
         """
         Talent API - Returns an index of talents.
         """
-        resource = f"/data/wow/talent/index"
+        resource = "/data/wow/talent/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -939,7 +957,7 @@ class WowGameDataApi(Api):
         """
         Talent API - Returns an index of PvP talents.
         """
-        resource = f"/data/wow/pvp-talent/index"
+        resource = "/data/wow/pvp-talent/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -957,7 +975,7 @@ class WowGameDataApi(Api):
         """
         Title API - Returns an index of titles.
         """
-        resource = f"/data/wow/title/index"
+        resource = "/data/wow/title/index"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -975,6 +993,6 @@ class WowGameDataApi(Api):
         """
         WoW Token API - Returns the WoW Token index.
         """
-        resource = f"/data/wow/token/index"
+        resource = "/data/wow/token/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
