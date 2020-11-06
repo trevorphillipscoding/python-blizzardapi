@@ -1,6 +1,6 @@
 import setuptools
 
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -21,14 +21,21 @@ setuptools.setup(
     url="https://github.com/trevorphillips/python-blizzardapi",
     packages=setuptools.find_packages(),
     install_requires=install_requirements,
+    python_requires=">=3.6",
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
+        "Topic :: Internet",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Utilities",
     ],
-    python_requires=">=3.6",
 )

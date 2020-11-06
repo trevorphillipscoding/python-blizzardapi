@@ -4,3 +4,7 @@ class BlizzardApiException(Exception):
 
 class BlizzardApiRequestException(BlizzardApiException):
     pass
+
+
+class BlizzardApiResponseExeception(BlizzardApiException):
+    pass

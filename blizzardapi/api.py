@@ -1,7 +1,10 @@
 import requests
 from requests.exceptions import RequestException
 
-from .exceptions import BlizzardApiRequestException
+from .exceptions import (
+    BlizzardApiRequestException,
+    BlizzardApiResponseExeception,
+)
 
 
 class Api:
@@ -34,16 +37,10 @@ class Api:
         return self._response_handler(response)
 
     def _response_handler(self, response):
-        if not response.ok:
-            msg = (
-                f"Invalid response - {response.status_code} for {response.url}"
-            )
-            raise BlizzardApiRequestException(msg)
-
         try:
             json = response.json()
         except Exception as e:
-            raise BlizzardApiRequestException(str(e))
+            raise BlizzardApiResponseExeception(str(e))
 
         return json
 
