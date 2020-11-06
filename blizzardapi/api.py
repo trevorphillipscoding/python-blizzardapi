@@ -82,6 +82,6 @@ class Api:
 
         return url
 
-    def get_oauth_resource(self, resource, region, query_params):
+    def get_oauth_resource(self, resource, region, query_params={}):
         url = self._format_oauth_url(resource, region)
         return self._request_handler(url, region, query_params)

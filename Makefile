@@ -1,3 +1,6 @@
+devinstall:
+	pip install -r requirements.txt
+
 clean:
 	rm -rf dist
 	rm -rf build

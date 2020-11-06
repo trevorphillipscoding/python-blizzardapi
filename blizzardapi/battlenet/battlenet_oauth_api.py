@@ -1,5 +1,3 @@
-from urllib import parse
-
 from ..api import Api
 
 
@@ -13,7 +11,8 @@ class BattlenetOauthApi(Api):
 
     def get_user_info(self, region, access_token):
         """
-        User Authentication - Returns basic information about the user associated with the current bearer token.
+        User Authentication - Returns basic information about the user
+        associated with the current bearer token.
         """
         resource = "/oauth/userinfo"
         query_params = {

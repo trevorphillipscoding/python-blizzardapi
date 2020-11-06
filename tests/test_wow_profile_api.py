@@ -279,9 +279,7 @@ class TestWowProfileApi(object):
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "{0}/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile".format(
-                "https://us.api.blizzard.com"
-            ),
+            "https://us.api.blizzard.com/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile",
             params=params,
         )
 
@@ -297,9 +295,7 @@ class TestWowProfileApi(object):
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "{0}/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile/season/1".format(
-                "https://us.api.blizzard.com"
-            ),
+            "https://us.api.blizzard.com/profile/wow/character/blackmoore/ayanda/mythic-keystone-profile/season/1",
             params=params,
         )
 
