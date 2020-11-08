@@ -1,10 +1,7 @@
 import requests
 from requests.exceptions import RequestException
 
-from .exceptions import (
-    BlizzardApiRequestException,
-    BlizzardApiResponseExeception,
-)
+from .exceptions import BlizzardApiRequestException
 
 
 class Api:
@@ -37,12 +34,7 @@ class Api:
         return self._response_handler(response)
 
     def _response_handler(self, response):
-        try:
-            json = response.json()
-        except Exception as e:
-            raise BlizzardApiResponseExeception(str(e))
-
-        return json
+        return response.json()
 
     def _request_handler(self, url, region, query_params):
         if self._access_token is None:
