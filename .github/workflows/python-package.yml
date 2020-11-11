@@ -34,7 +34,7 @@ jobs:
           mypy blizzardapi
       - name: Lint with pycodestyle
         run: |
-          pycodestyle blizzardapi --count --statistics
+          pycodestyle blizzardapi --count --statistics --ignore=E501
       - name: Lint with pydocstyle
         run: |
           pydocstyle blizzardapi

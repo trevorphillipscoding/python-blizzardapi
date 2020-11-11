@@ -18,7 +18,7 @@ lint:
 	black . -l 200 && black . -l 79
 	bandit blizzardapi
 	mypy blizzardapi
-	pycodestyle blizzardapi --count --statistics
+	pycodestyle blizzardapi --count --statistics --ignore=E501
 	pydocstyle blizzardapi
 	pyflakes blizzardapi
 	pylint blizzardapi
