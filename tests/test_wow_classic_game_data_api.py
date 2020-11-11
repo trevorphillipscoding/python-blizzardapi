@@ -426,7 +426,7 @@ class TestWowClassicGameDataApi:
             "https://us.api.blizzard.com/data/wow/region/1", params=params
         )
 
-    # WoW Token API
+    # Wow Token API
 
     def test_get_tokens_index(self, success_response_mock):
         self.api.wow.game_data.get_token_index("us", "en_US", is_classic=True)

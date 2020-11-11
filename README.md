@@ -5,9 +5,9 @@ python-blizzardapi is a client library for Blizzard's APIs.
 
 Current supported features include:
 - Battle.net User
-- WoW Profile
-- WoW Game Data
-- WoW Classic Game Data
+- Wow Profile
+- Wow Game Data
+- Wow Classic Game Data
 - Diablo 3 Community
 - Diablo 3 Game Data
 
@@ -40,7 +40,7 @@ categories_index = api_client.wow.game_data.get_achievement_categories_index("us
 # Protected API Endpoint
 summary = api_client.wow.profile.get_account_profile_summary("us", "en_US", "access_token")
 
-# WoW Classic endpoint
+# Wow Classic endpoint
 connected_realms_index = api_client.wow.game_data.get_connected_realms_index("us", "en_US", is_classic=True)
 ```
 

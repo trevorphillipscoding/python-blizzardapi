@@ -1,3 +1,4 @@
+"""battlenet_api.py file."""
 from .battlenet_oauth_api import BattlenetOauthApi
 
 
@@ -10,5 +11,5 @@ class BattlenetApi:
     """
 
     def __init__(self, client_id, client_secret):
-        """Inits BattlenetApi"""
+        """Init BattlenetApi."""
         self.oauth = BattlenetOauthApi(client_id, client_secret)

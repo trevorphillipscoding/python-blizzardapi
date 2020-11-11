@@ -345,7 +345,7 @@ class TestWowProfileApi(object):
             params=params,
         )
 
-    # Character PvP API
+    # Character Pvp API
 
     def test_get_character_pvp_bracket_statistics(self, success_response_mock):
         self.api.wow.profile.get_character_pvp_bracket_statistics(

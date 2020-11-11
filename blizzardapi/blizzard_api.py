@@ -1,3 +1,4 @@
+"""blizzard_api.py file."""
 from .battlenet.battlenet_api import BattlenetApi
 from .diablo3.diablo3_api import Diablo3Api
 from .hearthstone.hearthstone_api import HearthstoneApi
@@ -13,7 +14,7 @@ class BlizzardApi:
     """
 
     def __init__(self, client_id, client_secret):
-        """Inits BlizzardApi"""
+        """Init BlizzardApi."""
         self.battlenet = BattlenetApi(client_id, client_secret)
         self.diablo3 = Diablo3Api(client_id, client_secret)
         self.hearthstone = HearthstoneApi(client_id, client_secret)

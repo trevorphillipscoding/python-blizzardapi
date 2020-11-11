@@ -1,19 +1,18 @@
+"""battlenet_oauth_api.py file."""
 from ..api import Api
 
 
 class BattlenetOauthApi(Api):
-    """All OAuth API methods"""
+    """All Battle.net OAuth API methods."""
 
     def __init__(self, client_id, client_secret):
+        """Init BattlenetOauthApi."""
         super().__init__(client_id, client_secret)
 
     # User Authentication
 
     def get_user_info(self, region, access_token):
-        """
-        User Authentication - Returns basic information about the user
-        associated with the current bearer token.
-        """
+        """User Authentication - Returns basic information about the user associated with the current bearer token."""
         resource = "/oauth/userinfo"
         query_params = {
             "access_token": access_token,
