@@ -5,7 +5,15 @@ from .wow.wow_api import WowApi
 
 
 class BlizzardApi:
+    """Blizzard API class.
+
+    Attributes:
+        client_id: A client id supplied by Blizzard.
+        client_secret: A client secret supplied by Blizzard.
+    """
+
     def __init__(self, client_id, client_secret):
+        """Inits BlizzardApi"""
         self.battlenet = BattlenetApi(client_id, client_secret)
         self.diablo3 = Diablo3Api(client_id, client_secret)
         self.hearthstone = HearthstoneApi(client_id, client_secret)
