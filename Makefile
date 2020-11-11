@@ -4,21 +4,21 @@ devinstall:
 	pip install -r requirements.txt
 
 clean:
-	rm -rf dist
+	find . -type d -name __pycache__ -delete
+	find . -type f -name '*.py[co]' -delete
+	rm -rf .coverage
+	rm -rf .pytest_cache
 	rm -rf build
+	rm -rf dist
+	rm -rf docs
 	rm -rf htmlcov
 	rm -rf python_blizzardapi.egg-info
-	rm -rf .coverage
-	rm -rf docs
-	rm -rf .pytest_cache
-	find . -type f -name '*.py[co]' -delete
-	find . -type d -name __pycache__ -delete
 
 lint:
 	black . -l 200 && black . -l 79
 	bandit blizzardapi
 	mypy blizzardapi
-	pycodestyle blizzardapi
+	pycodestyle blizzardapi --count --statistics
 	pydocstyle blizzardapi
 	pyflakes blizzardapi
 	pylint blizzardapi
