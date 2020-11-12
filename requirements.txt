@@ -1,9 +1,7 @@
 bandit
 black
 mypy
-pycodestyle
 pydocstyle
-pyflakes
 pylint
 pytest-cov==2.10.1
 pytest-mock==3.3.1

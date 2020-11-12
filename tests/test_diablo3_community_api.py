@@ -15,8 +15,7 @@ class TestDiablo3CommunityApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/d3/data/act",
-            params=params,
+            "https://us.api.blizzard.com/d3/data/act", params=params
         )
 
     def test_get_act(self, success_response_mock):
@@ -26,8 +25,7 @@ class TestDiablo3CommunityApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/d3/data/act/1",
-            params=params,
+            "https://us.api.blizzard.com/d3/data/act/1", params=params
         )
 
     # D3 Artisan and Recipe API
@@ -80,8 +78,7 @@ class TestDiablo3CommunityApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/d3/data/hero/barbarian",
-            params=params,
+            "https://us.api.blizzard.com/d3/data/hero/barbarian", params=params
         )
 
     def test_get_api_skill(self, success_response_mock):
@@ -106,8 +103,7 @@ class TestDiablo3CommunityApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/d3/data/item-type",
-            params=params,
+            "https://us.api.blizzard.com/d3/data/item-type", params=params
         )
 
     def test_get_item_type(self, success_response_mock):

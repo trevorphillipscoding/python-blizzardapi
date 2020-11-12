@@ -14,6 +14,5 @@ class TestBattlenetOauthApi:
             "access_token": "new_access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.battle.net/oauth/userinfo",
-            params=params,
+            "https://us.battle.net/oauth/userinfo", params=params
         )

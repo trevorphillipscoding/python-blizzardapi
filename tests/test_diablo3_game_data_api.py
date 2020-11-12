@@ -14,8 +14,7 @@ class TestDiablo3GameDataApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/d3/season/",
-            params=params,
+            "https://us.api.blizzard.com/data/d3/season/", params=params
         )
 
     def test_get_season(self, success_response_mock):
@@ -24,8 +23,7 @@ class TestDiablo3GameDataApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/d3/season/1",
-            params=params,
+            "https://us.api.blizzard.com/data/d3/season/1", params=params
         )
 
     def test_get_season_leaderboard(self, success_response_mock):
@@ -46,8 +44,7 @@ class TestDiablo3GameDataApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/d3/era/",
-            params=params,
+            "https://us.api.blizzard.com/data/d3/era/", params=params
         )
 
     def test_get_era(self, success_response_mock):
@@ -56,8 +53,7 @@ class TestDiablo3GameDataApi:
             "access_token": "access_token",
         }
         success_response_mock.assert_called_with(
-            "https://us.api.blizzard.com/data/d3/era/1",
-            params=params,
+            "https://us.api.blizzard.com/data/d3/era/1", params=params
         )
 
     def test_get_era_leaderboard(self, success_response_mock):
