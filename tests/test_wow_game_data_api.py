@@ -998,7 +998,7 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    # PvP Season API
+    # Pvp Season API
 
     def test_get_pvp_seasons_index(self, success_response_mock):
         self.api.wow.game_data.get_pvp_seasons_index("us", "en_US")
@@ -1059,7 +1059,7 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    # PvP Tier API
+    # Pvp Tier API
 
     def test_get_pvp_tier_media(self, success_response_mock):
         self.api.wow.game_data.get_pvp_tier_media("us", "en_US", 1)
@@ -1385,7 +1385,7 @@ class TestWowGameDataApi:
             "https://us.api.blizzard.com/data/wow/title/1", params=params
         )
 
-    # WoW Token API
+    # Wow Token API
 
     def test_get_tokens_index(self, success_response_mock):
         self.api.wow.game_data.get_token_index("us", "en_US")

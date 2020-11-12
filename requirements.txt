@@ -1,4 +1,9 @@
-pytest==6.0.1
+bandit
+black
+mypy
+pydocstyle
+pylint
 pytest-cov==2.10.1
 pytest-mock==3.3.1
+pytest==6.0.1
 requests==2.24.0
