@@ -12,6 +12,7 @@ clean:
 	rm -rf dist
 	rm -rf docs
 	rm -rf htmlcov
+	rm -rf .mypy_cache
 	rm -rf python_blizzardapi.egg-info
 
 lint:

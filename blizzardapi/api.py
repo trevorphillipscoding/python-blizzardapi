@@ -1,10 +1,14 @@
 """api.py file."""
 import requests
-from requests.exceptions import RequestException
 
 
 class Api:
-    """Base API class."""
+    """Base API class.
+
+    Attributes:
+        client_id: A client id supplied by Blizzard.
+        client_secret: A client secret supplied by Blizzard.
+    """
 
     def __init__(self, client_id, client_secret):
         """Init Api."""

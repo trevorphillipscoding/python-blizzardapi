@@ -3,7 +3,12 @@ from ..api import Api
 
 
 class BattlenetOauthApi(Api):
-    """All Battle.net OAuth API methods."""
+    """All Battle.net OAuth API methods.
+
+    Attributes:
+        client_id: A client id supplied by Blizzard.
+        client_secret: A client secret supplied by Blizzard.
+    """
 
     def __init__(self, client_id, client_secret):
         """Init BattlenetOauthApi."""

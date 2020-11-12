@@ -3,7 +3,12 @@ from ..api import Api
 
 
 class Diablo3GameDataApi(Api):
-    """All Diablo 3 Game Data API methods."""
+    """All Diablo 3 Game Data API methods.
+
+    Attributes:
+        client_id: A client id supplied by Blizzard.
+        client_secret: A client secret supplied by Blizzard.
+    """
 
     def __init__(self, client_id, client_secret):
         """Init Diablo3GameDataApi."""

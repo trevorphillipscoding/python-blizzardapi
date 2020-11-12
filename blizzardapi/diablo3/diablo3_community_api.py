@@ -3,7 +3,12 @@ from ..api import Api
 
 
 class Diablo3CommunityApi(Api):
-    """All Diablo 3 Community API methods."""
+    """All Diablo 3 Community API methods.
+
+    Attributes:
+        client_id: A client id supplied by Blizzard.
+        client_secret: A client secret supplied by Blizzard.
+    """
 
     def __init__(self, client_id, client_secret):
         """Init Diablo3CommunityApi."""
