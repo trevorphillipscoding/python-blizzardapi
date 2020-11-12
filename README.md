@@ -10,6 +10,7 @@ Current supported features include:
 - Wow Classic Game Data
 - Diablo 3 Community
 - Diablo 3 Game Data
+- Hearthstone Game Data
 
 To gain access to Blizzard's API please register [here](https://develop.battle.net/access/) to obtain a client id and client secret.
 
