@@ -20,4 +20,4 @@ lint:
 	bandit blizzardapi
 	mypy blizzardapi
 	pydocstyle blizzardapi
-	pylint blizzardapi
+	pylint blizzardapi --exit-zero

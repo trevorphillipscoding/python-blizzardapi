@@ -37,7 +37,7 @@ jobs:
           pydocstyle blizzardapi
       - name: Lint with pylint
         run: |
-          pylint blizzardapi
+          pylint blizzardapi --exit-zero
       - name: Test with pytest
         run: |
           pytest
