@@ -32,15 +32,9 @@ jobs:
       - name: Lint with mypy
         run: |
           mypy blizzardapi
-      - name: Lint with pycodestyle
-        run: |
-          pycodestyle blizzardapi --count --statistics --ignore=E501
       - name: Lint with pydocstyle
         run: |
           pydocstyle blizzardapi
-      - name: Lint with pyflakes
-        run: |
-          pyflakes blizzardapi
       - name: Lint with pylint
         run: |
           pylint blizzardapi
