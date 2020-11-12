@@ -6,8 +6,14 @@ class Api:
     """Base API class.
 
     Attributes:
-        client_id: A client id supplied by Blizzard.
-        client_secret: A client secret supplied by Blizzard.
+        _client_id: A string client id supplied by Blizzard.
+        _client_secret: A string client secret supplied by Blizzard.
+        _access_token: A string access token that is used to access Blizzard's API.
+        _api_url: A string url used to call the API endpoints.
+        _api_url_cn: A string url used to call the china API endpoints.
+        _oauth_url: A string url used to call the OAuth API endpoints.
+        _oauth_url_cn: A string url used to call the china OAuth API endpoints.
+        _session: An open requests.Session instance.
     """
 
     def __init__(self, client_id, client_secret):
@@ -25,7 +31,12 @@ class Api:
         self._session = requests.Session()
 
     def _get_client_token(self, region):
-        """Fetch an access token based on client id and client secret credentials."""
+        """Fetch an access token based on client id and client secret credentials.
+
+        Args:
+            region:
+                A string containing a region.
+        """
         url = self._format_oauth_url("/oauth/token", region)
         query_params = {"grant_type": "client_credentials"}
 

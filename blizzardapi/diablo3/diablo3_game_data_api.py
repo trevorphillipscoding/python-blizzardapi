@@ -6,8 +6,8 @@ class Diablo3GameDataApi(Api):
     """All Diablo 3 Game Data API methods.
 
     Attributes:
-        client_id: A client id supplied by Blizzard.
-        client_secret: A client secret supplied by Blizzard.
+        client_id: A string client id supplied by Blizzard.
+        client_secret: A string client secret supplied by Blizzard.
     """
 
     def __init__(self, client_id, client_secret):
