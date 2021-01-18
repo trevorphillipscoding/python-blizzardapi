@@ -3,7 +3,7 @@ black
 mypy
 pydocstyle
 pylint
-pytest-cov==2.10.1
+pytest-cov==2.11.0
 pytest-mock==3.4.0
 pytest==6.2.1
 requests==2.25.1
