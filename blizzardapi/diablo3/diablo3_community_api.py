@@ -106,9 +106,7 @@ class Diablo3CommunityApi(Api):
         query_params = {"locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_api_detailed_follower_items(
-        self, region, locale, account_id, hero_id
-    ):
+    def get_api_detailed_follower_items(self, region, locale, account_id, hero_id):
         """Return a single item by item slug and ID."""
         resource = f"/d3/profile/{account_id}/hero/{hero_id}/follower-items"
         query_params = {"locale": locale}

@@ -1,8 +1,8 @@
-.PHONY: devinstall clean lint
-
+.PHONY: devinstall
 devinstall:
 	pip install -r requirements.txt
 
+.PHONY: clean
 clean:
 	find . -type d -name __pycache__ -delete
 	find . -type f -name '*.py[co]' -delete
@@ -15,9 +15,17 @@ clean:
 	rm -rf .mypy_cache
 	rm -rf python_blizzardapi.egg-info
 
+.PHONY: lint
 lint:
-	black . -l 200 && black . -l 79
+	black blizzardapi --check
 	bandit blizzardapi
+	flake8 blizzardapi --statistics
+	isort blizzardapi --check
 	mypy blizzardapi
 	pydocstyle blizzardapi
 	pylint blizzardapi --exit-zero
+
+.PHONY: format
+format:
+	black blizzardapi
+	isort blizzardapi

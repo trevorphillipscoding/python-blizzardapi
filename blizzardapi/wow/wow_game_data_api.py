@@ -22,9 +22,7 @@ class WowGameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_achievement_category(
-        self, region, locale, achievement_category_id
-    ):
+    def get_achievement_category(self, region, locale, achievement_category_id):
         """Return an achievement category by ID."""
         resource = f"/data/wow/achievement-category/{achievement_category_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -81,20 +79,14 @@ class WowGameDataApi(Api):
     def get_connected_realms_index(self, region, locale, is_classic=False):
         """Return an index of connected realms."""
         resource = "/data/wow/connected-realm/index"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_connected_realm(
-        self, region, locale, connected_realm_id, is_classic=False
-    ):
+    def get_connected_realm(self, region, locale, connected_realm_id, is_classic=False):
         """Return a connected realm by ID."""
         resource = f"/data/wow/connected-realm/{connected_realm_id}"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -103,49 +95,35 @@ class WowGameDataApi(Api):
     def get_creature_families_index(self, region, locale, is_classic=False):
         """Return an index of creature families."""
         resource = "/data/wow/creature-family/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_creature_family(
-        self, region, locale, creature_family_id, is_classic=False
-    ):
+    def get_creature_family(self, region, locale, creature_family_id, is_classic=False):
         """Return a creature family by ID."""
         resource = f"/data/wow/creature-family/{creature_family_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_creature_types_index(self, region, locale, is_classic=False):
         """Return an index of creature types."""
         resource = "/data/wow/creature-type/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_creature_type(
-        self, region, locale, creature_type_id, is_classic=False
-    ):
+    def get_creature_type(self, region, locale, creature_type_id, is_classic=False):
         """Return a creature type by ID."""
         resource = f"/data/wow/creature-type/{creature_type_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_creature(self, region, locale, creature_id, is_classic=False):
         """Return a creature by ID."""
         resource = f"/data/wow/creature/{creature_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -154,9 +132,7 @@ class WowGameDataApi(Api):
     ):
         """Return media for a creature display by ID."""
         resource = f"/data/wow/media/creature-display/{creature_display_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -165,44 +141,30 @@ class WowGameDataApi(Api):
     ):
         """Return media for a creature family by ID."""
         resource = f"/data/wow/media/creature-family/{creature_family_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     # Guild Crest API
 
-    def get_guild_crest_components_index(
-        self, region, locale, is_classic=False
-    ):
+    def get_guild_crest_components_index(self, region, locale, is_classic=False):
         """Return an index of guild crest media."""
         resource = "/data/wow/guild-crest/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_guild_crest_border_media(
-        self, region, locale, border_id, is_classic=False
-    ):
+    def get_guild_crest_border_media(self, region, locale, border_id, is_classic=False):
         """Return media for a guild crest border by ID."""
         resource = f"/data/wow/media/guild-crest/border/{border_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_guild_crest_emblem_media(
-        self, region, locale, emblem_id, is_classic=False
-    ):
+    def get_guild_crest_emblem_media(self, region, locale, emblem_id, is_classic=False):
         """Return media for a guild crest emblem by ID."""
         resource = f"/data/wow/media/guild-crest/emblem/{emblem_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -211,36 +173,28 @@ class WowGameDataApi(Api):
     def get_item_classes_index(self, region, locale, is_classic=False):
         """Return an index of item classes."""
         resource = "/data/wow/item-class/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_item_class(self, region, locale, item_class_id, is_classic=False):
         """Return an item class by ID."""
         resource = f"/data/wow/item-class/{item_class_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_item_sets_index(self, region, locale, is_classic=False):
         """Return an index of item sets."""
         resource = "/data/wow/item-set/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_item_set(self, region, locale, item_set_id, is_classic=False):
         """Return an item set by ID."""
         resource = f"/data/wow/item-set/{item_set_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -248,28 +202,24 @@ class WowGameDataApi(Api):
         self, region, locale, item_class_id, item_subclass_id, is_classic=False
     ):
         """Return an item subclass by ID."""
-        resource = f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
+        resource = (
+            f"/data/wow/item-class/{item_class_id}/item-subclass/{item_subclass_id}"
         )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_item(self, region, locale, item_id, is_classic=False):
         """Return an item by ID."""
         resource = f"/data/wow/item/{item_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_item_media(self, region, locale, item_id, is_classic=False):
         """Return media for an item by ID."""
         resource = f"/data/wow/media/item/{item_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -343,13 +293,9 @@ class WowGameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_modified_crafting_reagent_slot_type(
-        self, region, locale, slot_type_id
-    ):
+    def get_modified_crafting_reagent_slot_type(self, region, locale, slot_type_id):
         """Return a Modified Crafting reagent slot type by ID."""
-        resource = (
-            f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
-        )
+        resource = f"/data/wow/modified-crafting/reagent-slot-type/{slot_type_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -381,9 +327,7 @@ class WowGameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_mythic_keystone_affix_media(
-        self, region, locale, keystone_affix_id
-    ):
+    def get_mythic_keystone_affix_media(self, region, locale, keystone_affix_id):
         """Return media for a mythic keystone affix by ID."""
         resource = f"/data/wow/media/keystone-affix/{keystone_affix_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
@@ -439,7 +383,9 @@ class WowGameDataApi(Api):
         self, region, locale, connected_realm_id
     ):
         """Return an index of Mythic Keystone Leaderboard dungeon instances for a connected realm."""
-        resource = f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
+        resource = (
+            f"/data/wow/connected-realm/{connected_realm_id}/mythic-leaderboard/index"
+        )
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -502,18 +448,14 @@ class WowGameDataApi(Api):
     def get_playable_classes_index(self, region, locale, is_classic=False):
         """Return an index of playable classes."""
         resource = "/data/wow/playable-class/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_playable_class(self, region, locale, class_id, is_classic=False):
         """Return a playable class by ID."""
         resource = f"/data/wow/playable-class/{class_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -522,9 +464,7 @@ class WowGameDataApi(Api):
     ):
         """Return media for a playable class by ID."""
         resource = f"/data/wow/media/playable-class/{playable_class_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -539,20 +479,14 @@ class WowGameDataApi(Api):
     def get_playable_races_index(self, region, locale, is_classic=False):
         """Return an index of playable races."""
         resource = "/data/wow/playable-race/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_playable_race(
-        self, region, locale, playable_race_id, is_classic=False
-    ):
+    def get_playable_race(self, region, locale, playable_race_id, is_classic=False):
         """Return a playable race by ID."""
         resource = f"/data/wow/playable-race/{playable_race_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -581,18 +515,14 @@ class WowGameDataApi(Api):
     def get_power_types_index(self, region, locale, is_classic=False):
         """Return an index of power types."""
         resource = "/data/wow/power-type/index"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_power_type(self, region, locale, power_type_id, is_classic=False):
         """Return a power type by ID."""
         resource = f"/data/wow/power-type/{power_type_id}"
-        namespace = (
-            f"static-classic-{region}" if is_classic else f"static-{region}"
-        )
+        namespace = f"static-classic-{region}" if is_classic else f"static-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -616,13 +546,9 @@ class WowGameDataApi(Api):
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
-    def get_profession_skill_tier(
-        self, region, locale, profession_id, skill_tier_id
-    ):
+    def get_profession_skill_tier(self, region, locale, profession_id, skill_tier_id):
         """Return a skill tier for a profession by ID."""
-        resource = (
-            f"/data/wow/profession/{profession_id}/skill-tier/{skill_tier_id}"
-        )
+        resource = f"/data/wow/profession/{profession_id}/skill-tier/{skill_tier_id}"
         query_params = {"namespace": f"static-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -654,9 +580,7 @@ class WowGameDataApi(Api):
 
     def get_pvp_leaderboards_index(self, region, locale, pvp_season_id):
         """Return an index of Pvp leaderboards for a Pvp season."""
-        resource = (
-            f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/index"
-        )
+        resource = f"/data/wow/pvp-season/{pvp_season_id}/pvp-leaderboard/index"
         query_params = {"namespace": f"dynamic-{region}", "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -747,18 +671,14 @@ class WowGameDataApi(Api):
     def get_realms_index(self, region, locale, is_classic=False):
         """Return an index of realms."""
         resource = "/data/wow/realm/index"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_realm(self, region, locale, realm_slug, is_classic=False):
         """Return a single realm by slug or ID."""
         resource = f"/data/wow/realm/{realm_slug}"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -767,18 +687,14 @@ class WowGameDataApi(Api):
     def get_regions_index(self, region, locale, is_classic=False):
         """Return an index of regions."""
         resource = "/data/wow/region/index"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
     def get_region(self, region, locale, region_id, is_classic=False):
         """Return a region by ID."""
         resource = f"/data/wow/region/{region_id}"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
 
@@ -867,8 +783,6 @@ class WowGameDataApi(Api):
     def get_token_index(self, region, locale, is_classic=False):
         """Return the Wow Token index."""
         resource = "/data/wow/token/index"
-        namespace = (
-            f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
-        )
+        namespace = f"dynamic-classic-{region}" if is_classic else f"dynamic-{region}"
         query_params = {"namespace": namespace, "locale": locale}
         return super().get_resource(resource, region, query_params)
