@@ -13,7 +13,7 @@ setuptools.setup(
     name="python-blizzardapi",
     version=__version__,
     author="Trevor Phillips",
-    author_email="trevorcoreyphillips@gmail.com",
+    author_email="trevorphillipscoding@gmail.com",
     description="python-blizzardapi is a client library for Blizzard's APIs.",
     long_description=long_description,
     long_description_content_type="text/markdown",
