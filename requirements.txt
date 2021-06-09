@@ -2,7 +2,7 @@ bandit==1.7.0
 black==21.5b1
 flake8==3.9.2
 isort==5.8.0
-mypy==0.812
+mypy==0.901
 pydocstyle==6.0.0
 pylint==2.8.2
 pytest-cov==2.12.0
