@@ -27,9 +27,7 @@ class TestDiablo3GameDataApi:
         )
 
     def test_get_season_leaderboard(self, success_response_mock):
-        self.api.diablo3.game_data.get_season_leaderboard(
-            "us", 1, "achievement-points"
-        )
+        self.api.diablo3.game_data.get_season_leaderboard("us", 1, "achievement-points")
         params = {
             "access_token": "access_token",
         }
@@ -57,9 +55,7 @@ class TestDiablo3GameDataApi:
         )
 
     def test_get_era_leaderboard(self, success_response_mock):
-        self.api.diablo3.game_data.get_era_leaderboard(
-            "us", 1, "rift-barbarian"
-        )
+        self.api.diablo3.game_data.get_era_leaderboard("us", 1, "rift-barbarian")
         params = {
             "access_token": "access_token",
         }

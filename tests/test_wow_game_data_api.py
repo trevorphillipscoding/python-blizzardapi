@@ -452,9 +452,7 @@ class TestWowGameDataApi:
         )
 
     def test_get_modified_crafting_category_index(self, success_response_mock):
-        self.api.wow.game_data.get_modified_crafting_category_index(
-            "us", "en_US"
-        )
+        self.api.wow.game_data.get_modified_crafting_category_index("us", "en_US")
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -477,9 +475,7 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    def test_get_modified_crafting_reagent_slot_type_index(
-        self, success_response_mock
-    ):
+    def test_get_modified_crafting_reagent_slot_type_index(self, success_response_mock):
         self.api.wow.game_data.get_modified_crafting_reagent_slot_type_index(
             "us", "en_US"
         )
@@ -493,9 +489,7 @@ class TestWowGameDataApi:
             params=params,
         )
 
-    def test_get_modified_crafting_reagent_slot_type(
-        self, success_response_mock
-    ):
+    def test_get_modified_crafting_reagent_slot_type(self, success_response_mock):
         self.api.wow.game_data.get_modified_crafting_reagent_slot_type(
             "us", "en_US", 16
         )
@@ -560,9 +554,7 @@ class TestWowGameDataApi:
         )
 
     def test_get_mythic_keystone_affix_media(self, success_response_mock):
-        self.api.wow.game_data.get_mythic_keystone_affix_media(
-            "us", "en_US", 1
-        )
+        self.api.wow.game_data.get_mythic_keystone_affix_media("us", "en_US", 1)
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -576,9 +568,7 @@ class TestWowGameDataApi:
     # Mythic Keystone Dungeon API
 
     def test_get_mythic_keystone_dungeons_index(self, success_response_mock):
-        self.api.wow.game_data.get_mythic_keystone_dungeons_index(
-            "us", "en_US"
-        )
+        self.api.wow.game_data.get_mythic_keystone_dungeons_index("us", "en_US")
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -663,12 +653,8 @@ class TestWowGameDataApi:
 
     # Mythic Keystone Leaderboard API
 
-    def test_get_mythic_keystone_leaderboards_index(
-        self, success_response_mock
-    ):
-        self.api.wow.game_data.get_mythic_keystone_leaderboards_index(
-            "us", "en_US", 1
-        )
+    def test_get_mythic_keystone_leaderboards_index(self, success_response_mock):
+        self.api.wow.game_data.get_mythic_keystone_leaderboards_index("us", "en_US", 1)
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -680,9 +666,7 @@ class TestWowGameDataApi:
         )
 
     def test_get_mythic_keystone_leaderboard(self, success_response_mock):
-        self.api.wow.game_data.get_mythic_keystone_leaderboard(
-            "us", "en_US", 1, 2, 3
-        )
+        self.api.wow.game_data.get_mythic_keystone_leaderboard("us", "en_US", 1, 2, 3)
         params = {
             "namespace": "dynamic-us",
             "locale": "en_US",
@@ -859,9 +843,7 @@ class TestWowGameDataApi:
     # Playable Specialization API
 
     def test_get_playable_specializations_index(self, success_response_mock):
-        self.api.wow.game_data.get_playable_specializations_index(
-            "us", "en_US"
-        )
+        self.api.wow.game_data.get_playable_specializations_index("us", "en_US")
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -885,9 +867,7 @@ class TestWowGameDataApi:
         )
 
     def test_get_playable_specialization_media(self, success_response_mock):
-        self.api.wow.game_data.get_playable_specialization_media(
-            "us", "en_US", 262
-        )
+        self.api.wow.game_data.get_playable_specialization_media("us", "en_US", 262)
         params = {
             "namespace": "static-us",
             "locale": "en_US",
@@ -962,9 +942,7 @@ class TestWowGameDataApi:
         )
 
     def test_get_profession_skill_tier(self, success_response_mock):
-        self.api.wow.game_data.get_profession_skill_tier(
-            "us", "en_US", 164, 2477
-        )
+        self.api.wow.game_data.get_profession_skill_tier("us", "en_US", 164, 2477)
         params = {
             "namespace": "static-us",
             "locale": "en_US",

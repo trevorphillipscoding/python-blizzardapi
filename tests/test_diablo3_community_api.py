@@ -70,9 +70,7 @@ class TestDiablo3CommunityApi:
     # D3 Character Class and Skill API
 
     def test_get_character_class(self, success_response_mock):
-        self.api.diablo3.community.get_character_class(
-            "us", "en_US", "barbarian"
-        )
+        self.api.diablo3.community.get_character_class("us", "en_US", "barbarian")
         params = {
             "locale": "en_US",
             "access_token": "access_token",
@@ -82,9 +80,7 @@ class TestDiablo3CommunityApi:
         )
 
     def test_get_api_skill(self, success_response_mock):
-        self.api.diablo3.community.get_api_skill(
-            "us", "en_US", "barbarian", "bash"
-        )
+        self.api.diablo3.community.get_api_skill("us", "en_US", "barbarian", "bash")
         params = {
             "locale": "en_US",
             "access_token": "access_token",
@@ -135,9 +131,7 @@ class TestDiablo3CommunityApi:
     # D3 Profile API
 
     def test_get_api_account(self, success_response_mock):
-        self.api.diablo3.community.get_api_account(
-            "us", "en_US", "Battletag#1234"
-        )
+        self.api.diablo3.community.get_api_account("us", "en_US", "Battletag#1234")
         params = {
             "locale": "en_US",
             "access_token": "access_token",
@@ -148,9 +142,7 @@ class TestDiablo3CommunityApi:
         )
 
     def test_get_api_hero(self, success_response_mock):
-        self.api.diablo3.community.get_api_hero(
-            "us", "en_US", "Battletag#1234", 1
-        )
+        self.api.diablo3.community.get_api_hero("us", "en_US", "Battletag#1234", 1)
         params = {
             "locale": "en_US",
             "access_token": "access_token",
