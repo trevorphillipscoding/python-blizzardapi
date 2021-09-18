@@ -69,6 +69,30 @@ class TestWowGameDataApi:
 
     # Auction House API
 
+    def test_get_auction_house_index(self, success_response_mock):
+        self.api.wow.game_data.get_auction_house_index("us", "en_US", 4372)
+        params = {
+            "namespace": "dynamic-classic-us",
+            "locale": "en_US",
+            "access_token": "access_token",
+        }
+        success_response_mock.assert_called_with(
+            "https://us.api.blizzard.com/data/wow/connected-realm/4372/auctions/index",
+            params=params,
+        )
+
+    def test_get_auctions_for_auction_house(self, success_response_mock):
+        self.api.wow.game_data.get_auctions_for_auction_house("us", "en_US", 4372, 2)
+        params = {
+            "namespace": "dynamic-classic-us",
+            "locale": "en_US",
+            "access_token": "access_token",
+        }
+        success_response_mock.assert_called_with(
+            "https://us.api.blizzard.com/data/wow/connected-realm/4372/auctions/2",
+            params=params,
+        )
+
     def test_get_auctions(self, success_response_mock):
         self.api.wow.game_data.get_auctions("us", "en_US", 1146)
         params = {
