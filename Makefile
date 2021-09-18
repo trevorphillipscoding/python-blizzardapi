@@ -12,20 +12,15 @@ clean:
 	rm -rf dist
 	rm -rf docs
 	rm -rf htmlcov
-	rm -rf .mypy_cache
 	rm -rf python_blizzardapi.egg-info
 
 .PHONY: lint
 lint:
-	black blizzardapi --check
-	bandit blizzardapi
-	flake8 blizzardapi --statistics
-	isort blizzardapi --check
-	mypy blizzardapi
-	pydocstyle blizzardapi
-	pylint blizzardapi --exit-zero
+	black . --check
+	isort . --check
+	flake8 . --statistics
 
 .PHONY: format
 format:
-	black blizzardapi
-	isort blizzardapi
+	black .
+	isort .

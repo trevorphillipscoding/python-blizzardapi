@@ -26,18 +26,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Lint with bandit
+      - name: Lint
         run: |
-          bandit blizzardapi
-      - name: Lint with mypy
-        run: |
-          mypy blizzardapi
-      - name: Lint with pydocstyle
-        run: |
-          pydocstyle blizzardapi
-      - name: Lint with pylint
-        run: |
-          pylint blizzardapi --exit-zero
+          make lint
       - name: Test with pytest
         run: |
           pytest
