@@ -23,9 +23,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_connected_realm(self, success_response_mock):
-        self.api.wow.game_data.get_connected_realm(
-            "us", "en_US", 1, is_classic=True
-        )
+        self.api.wow.game_data.get_connected_realm("us", "en_US", 1, is_classic=True)
         params = {
             "namespace": "dynamic-classic-us",
             "locale": "en_US",
@@ -53,9 +51,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_creature_family(self, success_response_mock):
-        self.api.wow.game_data.get_creature_family(
-            "us", "en_US", 1, is_classic=True
-        )
+        self.api.wow.game_data.get_creature_family("us", "en_US", 1, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -67,9 +63,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_creature_types_index(self, success_response_mock):
-        self.api.wow.game_data.get_creature_types_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_creature_types_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -81,9 +75,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_creature_type(self, success_response_mock):
-        self.api.wow.game_data.get_creature_type(
-            "us", "en_US", 1, is_classic=True
-        )
+        self.api.wow.game_data.get_creature_type("us", "en_US", 1, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -180,9 +172,7 @@ class TestWowClassicGameDataApi:
     # Item API
 
     def test_get_item_classes_index(self, success_response_mock):
-        self.api.wow.game_data.get_item_classes_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_item_classes_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -194,9 +184,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_item_class(self, success_response_mock):
-        self.api.wow.game_data.get_item_class(
-            "us", "en_US", 2, is_classic=True
-        )
+        self.api.wow.game_data.get_item_class("us", "en_US", 2, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -207,9 +195,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_item_sets_index(self, success_response_mock):
-        self.api.wow.game_data.get_item_sets_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_item_sets_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -232,9 +218,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_item_subclass(self, success_response_mock):
-        self.api.wow.game_data.get_item_subclass(
-            "us", "en_US", 2, 1, is_classic=True
-        )
+        self.api.wow.game_data.get_item_subclass("us", "en_US", 2, 1, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -257,9 +241,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_item_media(self, success_response_mock):
-        self.api.wow.game_data.get_item_media(
-            "us", "en_US", 9999, is_classic=True
-        )
+        self.api.wow.game_data.get_item_media("us", "en_US", 9999, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -287,9 +269,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_playable_class(self, success_response_mock):
-        self.api.wow.game_data.get_playable_class(
-            "us", "en_US", 7, is_classic=True
-        )
+        self.api.wow.game_data.get_playable_class("us", "en_US", 7, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -317,9 +297,7 @@ class TestWowClassicGameDataApi:
     # Playable Race API
 
     def test_get_playable_races_index(self, success_response_mock):
-        self.api.wow.game_data.get_playable_races_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_playable_races_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -331,9 +309,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_playable_race(self, success_response_mock):
-        self.api.wow.game_data.get_playable_race(
-            "us", "en_US", 2, is_classic=True
-        )
+        self.api.wow.game_data.get_playable_race("us", "en_US", 2, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -347,9 +323,7 @@ class TestWowClassicGameDataApi:
     # Power Type API
 
     def test_get_power_types_index(self, success_response_mock):
-        self.api.wow.game_data.get_power_types_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_power_types_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -361,9 +335,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_power_type(self, success_response_mock):
-        self.api.wow.game_data.get_power_type(
-            "us", "en_US", 0, is_classic=True
-        )
+        self.api.wow.game_data.get_power_type("us", "en_US", 0, is_classic=True)
         params = {
             "namespace": "static-classic-us",
             "locale": "en_US",
@@ -387,9 +359,7 @@ class TestWowClassicGameDataApi:
         )
 
     def test_get_realm(self, success_response_mock):
-        self.api.wow.game_data.get_realm(
-            "us", "en_US", "tichondrius", is_classic=True
-        )
+        self.api.wow.game_data.get_realm("us", "en_US", "tichondrius", is_classic=True)
         params = {
             "namespace": "dynamic-classic-us",
             "locale": "en_US",
@@ -403,9 +373,7 @@ class TestWowClassicGameDataApi:
     # Region API
 
     def test_get_regions_index(self, success_response_mock):
-        self.api.wow.game_data.get_regions_index(
-            "us", "en_US", is_classic=True
-        )
+        self.api.wow.game_data.get_regions_index("us", "en_US", is_classic=True)
         params = {
             "namespace": "dynamic-classic-us",
             "locale": "en_US",

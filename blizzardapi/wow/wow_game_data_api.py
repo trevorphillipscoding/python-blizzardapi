@@ -48,6 +48,24 @@ class WowGameDataApi(Api):
 
     # Auction House API
 
+    def get_auction_house_index(self, region, locale, connected_realm_id):
+        """*CLASSIC ONLY*
+        Returns an index of auction houses for a connected realm.
+        """
+        resource = f"/data/wow/connected-realm/{connected_realm_id}/auctions/index"
+        query_params = {"namespace": f"dynamic-classic-{region}", "locale": locale}
+        return super().get_resource(resource, region, query_params)
+
+    def get_auctions_for_auction_house(
+        self, region, locale, connected_realm_id, auction_house_id
+    ):
+        """*CLASSIC ONLY*
+        Returns all active auctions for a specific auction house on a connected realm.
+        """
+        resource = f"/data/wow/connected-realm/{connected_realm_id}/auctions/{auction_house_id}"
+        query_params = {"namespace": f"dynamic-classic-{region}", "locale": locale}
+        return super().get_resource(resource, region, query_params)
+
     def get_auctions(self, region, locale, connected_realm_id):
         """Return all active auctions for a connected realm."""
         resource = f"/data/wow/connected-realm/{connected_realm_id}/auctions"

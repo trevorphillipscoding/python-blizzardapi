@@ -21,9 +21,7 @@ class TestWowProfileApi(object):
             "https://us.api.blizzard.com/profile/user/wow", params=params
         )
 
-    def test_get_protected_character_profile_summary(
-        self, success_response_mock
-    ):
+    def test_get_protected_character_profile_summary(self, success_response_mock):
         self.api.wow.profile.get_protected_character_profile_summary(
             "us", "en_US", "new_access_token", 1, 9000
         )
@@ -51,9 +49,7 @@ class TestWowProfileApi(object):
             params=params,
         )
 
-    def test_get_account_mounts_collection_summary(
-        self, success_response_mock
-    ):
+    def test_get_account_mounts_collection_summary(self, success_response_mock):
         self.api.wow.profile.get_account_mounts_collection_summary(
             "us", "en_US", "new_access_token"
         )
@@ -143,9 +139,7 @@ class TestWowProfileApi(object):
             params=params,
         )
 
-    def test_get_character_mounts_collection_index(
-        self, success_response_mock
-    ):
+    def test_get_character_mounts_collection_index(self, success_response_mock):
         self.api.wow.profile.get_character_mounts_collection_index(
             "us", "en_US", "khadgar", "asmon"
         )
@@ -190,9 +184,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_dungeons(self, success_response_mock):
-        self.api.wow.profile.get_character_dungeons(
-            "us", "en_US", "khadgar", "asmon"
-        )
+        self.api.wow.profile.get_character_dungeons("us", "en_US", "khadgar", "asmon")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -204,9 +196,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_character_raids(self, success_response_mock):
-        self.api.wow.profile.get_character_raids(
-            "us", "en_US", "khadgar", "asmon"
-        )
+        self.api.wow.profile.get_character_raids("us", "en_US", "khadgar", "asmon")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -267,9 +257,7 @@ class TestWowProfileApi(object):
 
     # Character Mythic Keystone Profile API
 
-    def test_get_character_mythic_keystone_profile_index(
-        self, success_response_mock
-    ):
+    def test_get_character_mythic_keystone_profile_index(self, success_response_mock):
         self.api.wow.profile.get_character_mythic_keystone_profile_index(
             "us", "en_US", "blackmoore", "ayanda"
         )
@@ -378,9 +366,7 @@ class TestWowProfileApi(object):
     # Character Quests API
 
     def test_get_character_quests(self, success_response_mock):
-        self.api.wow.profile.get_character_quests(
-            "us", "en_US", "khadgar", "asmon"
-        )
+        self.api.wow.profile.get_character_quests("us", "en_US", "khadgar", "asmon")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -423,9 +409,7 @@ class TestWowProfileApi(object):
 
     # Character Specializations API
 
-    def test_get_character_specializations_summary(
-        self, success_response_mock
-    ):
+    def test_get_character_specializations_summary(self, success_response_mock):
         self.api.wow.profile.get_character_specializations_summary(
             "us", "en_US", "khadgar", "asmon"
         )
@@ -486,9 +470,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_activity(self, success_response_mock):
-        self.api.wow.profile.get_guild_activity(
-            "us", "en_US", "khadgar", "bestguild"
-        )
+        self.api.wow.profile.get_guild_activity("us", "en_US", "khadgar", "bestguild")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",
@@ -514,9 +496,7 @@ class TestWowProfileApi(object):
         )
 
     def test_get_guild_roster(self, success_response_mock):
-        self.api.wow.profile.get_guild_roster(
-            "us", "en_US", "khadgar", "bestguild"
-        )
+        self.api.wow.profile.get_guild_roster("us", "en_US", "khadgar", "bestguild")
         params = {
             "namespace": "profile-us",
             "locale": "en_US",

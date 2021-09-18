@@ -45,9 +45,7 @@ class TestHearthstoneGameDataApi:
         )
 
     def test_get_card_back(self, success_response_mock):
-        self.api.hearthstone.game_data.get_card_back(
-            "us", "en_US", "155-pizza-stone"
-        )
+        self.api.hearthstone.game_data.get_card_back("us", "en_US", "155-pizza-stone")
         params = {
             "locale": "en_US",
             "access_token": "access_token",
