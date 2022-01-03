@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 install_requirements = [
-    "requests==2.26.0",
+    "requests==2.27.0",
 ]
 
 setuptools.setup(
