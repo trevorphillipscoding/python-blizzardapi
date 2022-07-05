@@ -2,6 +2,6 @@ black==21.12b0
 flake8==4.0.1
 isort==5.10.1
 pytest-cov==3.0.0
-pytest-mock==3.6.1
+pytest-mock==3.8.2
 pytest==6.2.5
 requests==2.27.1
