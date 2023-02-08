@@ -1,6 +1,6 @@
 black==23.1
 flake8==5.0
-isort==5.12
+isort==5.11
 pytest-cov==4.0
 pytest-mock==3.10
 pytest==7.2
